@@ -265,7 +265,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 		@include breakpoint(medium) {
 			br {
-				display: none;
+				/*display: none;*/
 			}
 		}
 	}
