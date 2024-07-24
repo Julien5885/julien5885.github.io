@@ -2,9 +2,9 @@
 #
 
 # Site settings
-title: Portfolio JME
+title: Portfolio
 description: |
-  Voici mon portfolio
+  Julien Mettetal
 owner: Julien Mettetal # or company name
 first_published: 2024 # if migrating another site, the year of your first publish
 email: jme@mtb111.fr
