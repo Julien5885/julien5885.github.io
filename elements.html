@@ -20,6 +20,7 @@ title: Projets
 <div id="projets-entreprise" class="tab-content active">
     <h3>Projets réalisés en entreprise</h3>
     <p><strong>Projet 1 :</strong> Réseau social d’entreprise</p>
+    <img src="{{ site.baseurl }}css/images/projets/JumpX.png" alt="Aperçu du Réseau social d’entreprise" class="projet-image">
     <p>En équipe, nous avons conçu une application web en utilisant Eclipse et Java pour créer un réseau social destiné aux entreprises. Cette plateforme vise à faciliter la communication, le partage d’informations et la collaboration entre les entreprises de manière sécurisée.</p>
 
     <p><strong>Projet 2 :</strong> Recherche de vulnérabilités</p>
@@ -61,6 +62,16 @@ function openTab(event, tabName) {
 
 <!-- CSS adapté au design du site -->
 <style>
+.projet-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* Alignement des onglets */
 .tabs {
     display: flex;
