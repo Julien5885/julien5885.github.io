@@ -15,27 +15,64 @@ title: Projets
     </button>
 </div>
 
-
-<!-- Contenu des projets en entreprise -->
+<!-- Contenu des projets en école -->
 <div id="projets-entreprise" class="tab-content active">
     <h3>Projets réalisés à l'école</h3>
-    <p><strong>Projet 1 :</strong> Réseau social d’entreprise</p>
+    
+    <h4>Projet 1 : JumpX</h4>
     <img src="{{ site.baseurl }}css/images/projets/JumpX.png" alt="Aperçu du Réseau social d’entreprise" class="projet-image">
-    <p>En équipe, nous avons conçu une application web en utilisant Eclipse et Java pour créer un réseau social destiné aux entreprises. Cette plateforme vise à faciliter la communication, le partage d’informations et la collaboration entre les entreprises de manière sécurisée.</p>
-
-    <p><strong>Projet 2 :</strong> Developpement d'un site E-commerce en Anglais </p>
-     <img src="{{ site.baseurl }}css/images/projets/Decorama.png" alt="Aperçu du Réseau social d’entreprise" class="projet-image">
-    <p>Dans le cadre de mon projet professionnel, j’ai élaboré un programme axé sur la cybersécurité. Ce programme est capable de rechercher les vulnérabilités d’un site web par une recherche par mots-clés.</p>
+    <p>
+        JumpX est la toute première application mobile que nous avons créée en équipe durant la première année de notre BTS SIO option SLAM. 
+        Ce projet nous a permis de mettre en pratique toutes les compétences demandées dans le cadre du Bloc 1 du BTS, à savoir :
+    </p>
+    <ul>
+        <li>Analyse des besoins et de la demande du client.</li>
+        <li>Utilisation du logiciel GANTT pour planifier et organiser le projet.</li>
+        <li>Réalisation du Modèle Conceptuel de Données (MCD) pour structurer les bases de données.</li>
+        <li>Création des maquettes pour représenter visuellement l’application avant son développement.</li>
+    </ul>
+    <p>
+        JumpX est une plateforme conçue avec Eclipse et Java, destinée à être un réseau social pour entreprises, facilitant la communication et la collaboration de manière sécurisée.
+    </p>
+    
+    <h4>Projet 2 : Projet de deuxième année - RFTG</h4>
+    <img src="{{ site.baseurl }}css/images/projets/RFTG.png" alt="Aperçu du projet RFTG" class="projet-image">
+    <p>
+        RFTG (Rental For The Gérant) est une application de gestion de location de DVD développée pour répondre aux besoins d’un centre de vacances. Ce projet, réalisé en deuxième année, est divisé en deux parties distinctes :
+    </p>
+    <ul>
+        <li><strong>Mario :</strong> une application web destinée à la gestion du stock des DVD, utilisée par le gérant et ses employés.</li>
+        <li><strong>Luigi :</strong> une application mobile permettant aux clients du centre de vacances de louer des DVD facilement.</li>
+    </ul>
+    <p>
+        Ce projet nous a permis de travailler sur plusieurs technologies et outils avancés :
+    </p>
+    <ul>
+        <li>Back-end en <strong>Spring Boot</strong> pour assurer une API robuste et performante.</li>
+        <li>Front-end en <strong>Laravel</strong> pour une interface ergonomique et moderne.</li>
+        <li>Utilisation de <strong>VS Code</strong> et <strong>XAMPP</strong> pour le développement.</li>
+        <li>Réalisation des maquettes et du MCD pour définir clairement l’architecture du projet.</li>
+    </ul>
+    <p>
+        Ce projet nous a permis de consolider nos compétences en développement web et mobile, tout en mettant en place une solution complète et fonctionnelle adaptée aux besoins du client.
+    </p>
 </div>
 
-<!-- Contenu des projets en cours -->
+<!-- Contenu des projets en entreprise -->
 <div id="projets-ecole" class="tab-content">
     <h3>Projets réalisés en entreprise</h3>
-    <p><strong>Projet 1 :</strong> Application de gestion de bibliothèque</p>
-    <p>Développement d'une application en Java avec une base de données MySQL pour gérer le prêt et le retour de livres.</p>
-
-    <p><strong>Projet 2 :</strong> Site e-commerce avec Laravel</p>
-    <p>Création d'un site web permettant d'afficher, commander et gérer des produits en ligne.</p>
+    
+    <h4>Projet 1 : Application de gestion de bibliothèque</h4>
+    <p>
+        Durant mon expérience en entreprise, j’ai eu l’opportunité de travailler sur une application de gestion de bibliothèque développée en Java avec une base de données MySQL. 
+        L’objectif de cette application était de faciliter la gestion des prêts et des retours de livres, en offrant une interface intuitive pour les employés et les clients.
+    </p>
+    
+    <h4>Projet 2 : Site e-commerce avec Laravel</h4>
+    <p>
+        Un autre projet important sur lequel j’ai travaillé en entreprise est la création d’un site e-commerce permettant d’afficher, commander et gérer des produits en ligne. 
+        Ce projet m’a permis d’acquérir une expertise approfondie dans l’utilisation de Laravel pour le développement d’applications web, et de me familiariser avec les meilleures pratiques en matière de gestion des commandes et d’interfaces utilisateur modernes.
+    </p>
 </div>
 
 <!-- JavaScript pour gérer les onglets -->
@@ -82,7 +119,7 @@ function openTab(event, tabName) {
 
 /* Boutons des onglets */
 .tab-button {
-    background-color: #26A69A; /* Couleur principale du site */
+    background-color: #26A69A;
     border: 2px solid white;
     color: white;
     padding: 12px 20px;
@@ -95,7 +132,7 @@ function openTab(event, tabName) {
 }
 
 .tab-button:hover {
-    background-color: #1F8A77; /* Effet au survol */
+    background-color: #1F8A77;
 }
 
 .tab-button.active {
@@ -120,4 +157,3 @@ function openTab(event, tabName) {
     display: block;
 }
 </style>
-
