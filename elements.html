@@ -7,9 +7,14 @@ title: Projets
 
 <!-- Conteneur des onglets -->
 <div class="tabs">
-    <button class="tab-button active" onclick="openTab(event, 'projets-entreprise')">Projets en Entreprise</button>
-    <button class="tab-button" onclick="openTab(event, 'projets-ecole')">Projets en Cours</button>
+    <button class="tab-button active" onclick="openTab(event, 'projets-entreprise')">
+        <span style="display: inline-block; line-height: 1.5em;">Projets en Entreprise</span>
+    </button>
+    <button class="tab-button" onclick="openTab(event, 'projets-ecole')">
+        <span style="display: inline-block; line-height: 1.5em;">Projets en Cours</span>
+    </button>
 </div>
+
 
 <!-- Contenu des projets en entreprise -->
 <div id="projets-entreprise" class="tab-content active">
