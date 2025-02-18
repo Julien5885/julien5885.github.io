@@ -62,18 +62,71 @@ title: Projets
 <div id="projets-ecole" class="tab-content">
     <h3>Projets réalisés en entreprise</h3>
     
-    <h4>Projet 1 : Application de gestion de bibliothèque</h4>
+    <h4>Projet unique : Automatisation de la recherche de vulnérabilités web</h4>
     <p>
-        Durant mon expérience en entreprise, j’ai eu l’opportunité de travailler sur une application de gestion de bibliothèque développée en Java avec une base de données MySQL. 
-        L’objectif de cette application était de faciliter la gestion des prêts et des retours de livres, en offrant une interface intuitive pour les employés et les clients.
+        Dans le cadre de mon alternance, j’ai participé à un projet crucial visant à automatiser l’identification des vulnérabilités potentielles sur un site web. 
+        Ce projet a été développé en équipe de trois personnes et a permis de mettre en place une solution efficace pour faciliter l’audit de sécurité des applications web.
     </p>
-    
-    <h4>Projet 2 : Site e-commerce avec Laravel</h4>
+
+    <h5>🔎 Objectif du projet</h5>
     <p>
-        Un autre projet important sur lequel j’ai travaillé en entreprise est la création d’un site e-commerce permettant d’afficher, commander et gérer des produits en ligne. 
-        Ce projet m’a permis d’acquérir une expertise approfondie dans l’utilisation de Laravel pour le développement d’applications web, et de me familiariser avec les meilleures pratiques en matière de gestion des commandes et d’interfaces utilisateur modernes.
+        L’objectif principal était de <strong>réduire le temps consacré à l’analyse de sécurité manuelle</strong> en automatisant la recherche d’éléments critiques présents dans le code source des pages web. 
+        Cette automatisation permet d’identifier rapidement des pages susceptibles de présenter des vulnérabilités, en effectuant des analyses ciblées sur certains critères :
+    </p>
+    <ul>
+        <li>✔ <strong>Présence de formulaires d’authentification</strong>, souvent vulnérables aux attaques de type brute force.</li>
+        <li>✔ <strong>Présence ou absence de CAPTCHA</strong>, qui constitue une barrière supplémentaire contre les bots malveillants.</li>
+        <li>✔ <strong>Utilisation de JWT (JSON Web Token)</strong>, qui peut être une faille si mal implémenté.</li>
+    </ul>
+
+    <h5>🛠 Technologies et approche utilisées</h5>
+    <p>Ce projet repose sur une architecture en trois étapes distinctes :</p>
+    
+    <h6>1️⃣ Extraction du code HTML des pages web</h6>
+    <ul>
+        <li><strong>Langage :</strong> Python</li>
+        <li><strong>Outils :</strong> <code>Requests</code>, <code>BeautifulSoup</code></li>
+        <li><strong>Fonction :</strong> Récupération automatique du code HTML d’un site web cible afin d’obtenir une base de travail pour l’analyse de sécurité.</li>
+    </ul>
+
+    <h6>2️⃣ Recherche de mots-clés critiques</h6>
+    <ul>
+        <li><strong>Langage :</strong> Java</li>
+        <li><strong>Fonction :</strong> Analyse du code source en recherchant des indicateurs liés à la sécurité.</li>
+        <li><strong>Critères analysés :</strong>
+            <ul>
+                <li>Identifiants de formulaires (<code>&lt;form&gt;</code> avec <code>input type="password"</code>)</li>
+                <li>Absence de CAPTCHA (<code>&lt;input&gt;</code> contenant le mot <code>captcha</code>)</li>
+                <li>Présence de JWT (<code>Authorization: Bearer &lt;token&gt;</code> dans les headers ou cookies)</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h6>3️⃣ Gestion et affichage des résultats</h6>
+    <ul>
+        <li><strong>Framework :</strong> Laravel</li>
+        <li><strong>Fonctionnalités :</strong> Interface utilisateur permettant d'afficher les pages analysées, les scores de risque et les recommandations.</li>
+    </ul>
+
+    <h5>⏳ Un gain de temps considérable pour les audits de sécurité</h5>
+    <p>
+        Avant cette automatisation, l’analyse de sécurité d’un site nécessitait une vérification manuelle de chaque page, ce qui était fastidieux et chronophage. 
+        Avec ce programme, <strong>l’identification des pages à haut risque est instantanée</strong>, ce qui permet aux analystes de se concentrer directement sur l’exploitation et la correction des failles.
+    </p>
+    <ul>
+        <li>✅ <strong>Automatisation du repérage des zones sensibles</strong> : Le script identifie en quelques secondes les pages potentiellement vulnérables.</li>
+        <li>✅ <strong>Optimisation des audits de cybersécurité</strong> : Moins de travail manuel, plus de rapidité dans la prise de décision.</li>
+        <li>✅ <strong>Amélioration de la sécurité des applications</strong> : Grâce à une détection plus rapide et efficace des failles.</li>
+    </ul>
+
+    <h5>📌 Conclusion</h5>
+    <p>
+        Ce projet a été une expérience extrêmement enrichissante. Il m’a permis d’approfondir mes compétences en 
+        <strong>développement full-stack (Python, Java, Laravel)</strong> et en <strong>cybersécurité</strong>, tout en travaillant en équipe sur une problématique réelle. 
+        L’outil développé constitue aujourd’hui une base précieuse pour les audits de sécurité et pourrait être amélioré avec des algorithmes de machine learning pour détecter encore plus efficacement les menaces.
     </p>
 </div>
+
 
 <!-- JavaScript pour gérer les onglets -->
 <script>
