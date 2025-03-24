@@ -14,7 +14,7 @@ nav_order: 5
   <h2 style="margin-bottom: 1rem;">Veille n°1 : Laravel</h2>
   
   <p style="margin-bottom: 1rem;">
-    <strong>Pourquoi cette techno ?</strong><br>
+    <strong>Pourquoi cette technologie ?</strong><br>
     Nous avons découvert Laravel en voulant un framework PHP 
     rapide à prendre en main et très structuré. Cette technologie 
     nous intéressait pour gérer facilement l’authentification, la 
@@ -42,7 +42,7 @@ nav_order: 5
   <h2 style="margin-bottom: 1rem;">Veille n°2 : Spring Boot</h2>
   
   <p style="margin-bottom: 1rem;">
-    <strong>Pourquoi cette techno&nbsp;?</strong><br>
+    <strong>Pourquoi cette technologie;?</strong><br>
     Dans le cadre de RFTG, nous avions besoin d’un <em>backend</em> Java 
     robuste et rapide à mettre en place. Spring Boot s’est avéré idéal, car il 
     simplifie la configuration et la création d’une API REST.
@@ -64,3 +64,38 @@ nav_order: 5
     • Bonnes pratiques autour de la sécurité des endpoints et du déploiement (Tomcat ou autre)
   </p>
 </section>
+
+<section style="margin-bottom: 2rem;">
+  <h2 style="margin-bottom: 1rem;">Veille n°3 : Android Studio & Processus Asynchrone</h2>
+  
+  <p style="margin-bottom: 1rem;">
+    <strong>Pourquoi cette techno ?</strong><br>
+    Durant la réalisation de l’application mobile RFTG, nous avons rencontré la problématique 
+    de gérer des tâches en arrière-plan (téléchargement de données, appels réseau) sans bloquer 
+    l’interface. Android Studio, combiné à des mécanismes d’exécution asynchrone, nous a permis 
+    de maintenir une application fluide et réactive.
+  </p>
+  
+  <p style="margin-bottom: 1rem;">
+    <strong>Ressources consultées :</strong><br>
+    • Documentation officielle d’Android (section <em>Threads &amp; Async Tasks</em>)<br>
+    • Tutoriels YouTube sur l’utilisation des <code>AsyncTask</code> (versions plus anciennes) 
+      et des <em>coroutines</em> Kotlin<br>
+    • Blogs et articles sur <em>LiveData</em>, <em>ViewModel</em> et l’architecture MVVM 
+      (pour une approche plus moderne)<br>
+    • Forums Stack Overflow pour la gestion des <em>handlers</em> et des <em>runnables</em>
+  </p>
+  
+  <p>
+    <strong>Ce que j’ai appris :</strong><br>
+    • L’importance d’effectuer les opérations longues (connexion réseau, accès à la BDD) dans 
+      un thread distinct du thread principal pour éviter de figer l’UI<br>
+    • Les bases des coroutines Kotlin (suspend functions, <code>GlobalScope.launch</code>, 
+      etc.) pour un code asynchrone plus lisible et moins “callback‐hell”<br>
+    • Comment utiliser des composants d’architecture (ViewModel, LiveData) pour observer 
+      l’état de l’application sans bloquer l’interface<br>
+    • Les bonnes pratiques pour synchroniser l’UI après une tâche asynchrone et mettre à jour 
+      l’affichage en toute sécurité
+  </p>
+</section>
+
