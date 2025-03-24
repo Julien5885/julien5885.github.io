@@ -99,3 +99,175 @@ nav_order: 5
   </p>
 </section>
 
+<section style="margin-bottom: 2rem;">
+  <h2 style="margin-bottom: 1rem;">Veille n°4 : Bug Bounty & YesWeHack</h2>
+
+  <p style="margin-bottom: 1rem;">
+    <strong>Pourquoi cette approche&nbsp;?</strong><br>
+    Au cours de mon projet 2ème année, j’ai découvert l’univers du 
+    bug bounty via la plateforme YesWeHack. Il s’agit d’un moyen pour 
+    les entreprises de faire tester leurs sites/applications par 
+    des chercheurs en sécurité, avec la perspective de récompenser 
+    les failles trouvées. Cela offrait un cadre légal et encadré pour 
+    apprendre la chasse aux vulnérabilités (XSS, IDOR, etc.) tout en 
+    collaborant avec d’autres experts.
+  </p>
+
+  <p style="margin-bottom: 1rem;">
+    <strong>Ressources consultées :</strong><br>
+    • Documentation officielle YesWeHack (<a href="https://yeswehack.com" target="_blank">yeswehack.com</a>)<br>
+    • Tutoriels et articles sur la création d’un programme de bug bounty<br>
+    • OWASP Top 10 pour identifier et comprendre les vulnérabilités les plus courantes<br>
+    • Présentations YouTube consacrées au bug bounty (HackerOne, YesWeHack, etc.)<br>
+    • Documentation de Burp Suite et ZAP pour l’exploitation pratique des failles
+  </p>
+
+  <p style="margin-bottom: 1rem;">
+    <strong>Ce que j’ai appris :</strong><br>
+    • La notion de <em>scope</em> dans un bug bounty&nbsp;: comment cibler 
+      les domaines autorisés et éviter de tester des ressources hors périmètre<br>
+    • Les cinq vulnérabilités clés (Force Brute, Injection SQL, XSS réfléchi, 
+      IDOR, Open Redirect) et leur mode d’exploitation réel<br>
+    • L’automatisation partielle du “recon” (recherche de pages et de sous‐domaines) 
+      grâce à des outils comme <strong>OWASP ZAP</strong> ou 
+      <strong>Python</strong> (scripts d’extraction)<br>
+    • L’importance d’une <em>démarche méthodique</em> pour limiter 
+      les oublis et bien documenter chaque tentative d’intrusion<br>
+    • Les bonnes pratiques pour signaler proprement une vulnérabilité 
+      (exploit, impact, preuve de concept) et échanger avec l’entreprise concernée
+  </p>
+
+  <p>
+    <strong>Perspectives :</strong><br>
+    Cette expérience m’a permis de mieux cerner l’écosystème 
+    des tests d’intrusion, de la remontée des failles et du “bug bounty” 
+    en général. Je prévois de poursuivre cette voie en étudiant 
+    plus en détail les approches <em>DevSecOps</em> et la mise en place 
+    d’outils d’analyse continue.
+  </p>
+</section>
+
+<section style="margin-bottom: 2rem;">
+  <h2 style="margin-bottom: 1rem;">Veille n°5 : Kali Linux</h2>
+  
+  <p style="margin-bottom: 1rem;">
+    <strong>Pourquoi cette distribution&nbsp;?</strong><br>
+    Kali Linux est une distribution Linux spécialisée dans les tests d’intrusion 
+    et l’audit de sécurité. Elle regroupe un large éventail d’outils préinstallés 
+    (scan réseau, sniffing, cracking de mots de passe, etc.).  
+    Dans le cadre de mes projets et de la cellule Cyber, Kali Linux s’est avérée 
+    très pratique pour centraliser tous les outils nécessaires à l’évaluation 
+    de la sécurité d’un système ou d’une application web.
+  </p>
+  
+  <p style="margin-bottom: 1rem;">
+    <strong>Ressources consultées&nbsp;:</strong><br>
+    • Site officiel de Kali Linux (<a href="https://www.kali.org" target="_blank">kali.org</a>)<br>
+    • Documentation sur l’installation et la configuration (images ISO, VirtualBox, etc.)<br>
+    • Tutoriels YouTube sur l’utilisation de certains outils intégrés (Nmap, Aircrack-ng, Metasploit)<br>
+    • Communauté Kali sur Reddit et forums officiels pour résoudre des problèmes spécifiques
+  </p>
+  
+  <p style="margin-bottom: 1rem;">
+    <strong>Ce que j’ai appris&nbsp;:</strong><br>
+    • Comment configurer et personnaliser un environnement Kali Linux (VM vs dual-boot)<br>
+    • Les différents packages préinstallés et leur usage (reconnaissance, exploitation, post-exploitation)<br>
+    • L’importance de maintenir un environnement à jour pour bénéficier des derniers correctifs 
+      et outils de sécurité<br>
+    • Les bonnes pratiques pour ne pas exposer inutilement sa machine lors de tests (réseau isolé, VPN, etc.)
+  </p>
+  
+  <p>
+    <strong>Perspectives&nbsp;:</strong><br>
+    Kali Linux reste un pilier pour tout testeur d’intrusion ou chercheur en vulnérabilités. 
+    Je compte approfondir l’utilisation de certains outils avancés (ex. Metasploit) 
+    afin de mieux comprendre les scénarios d’attaque possibles et renforcer mes compétences 
+    en cyberdéfense.
+  </p>
+</section>
+
+<section style="margin-bottom: 2rem;">
+  <h2 style="margin-bottom: 1rem;">Veille n°6 : Burp Suite</h2>
+  
+  <p style="margin-bottom: 1rem;">
+    <strong>Pourquoi cet outil&nbsp;?</strong><br>
+    Burp Suite est un outil incontournable pour l’audit de sécurité web. 
+    Il permet d’intercepter et de modifier les requêtes HTTP/HTTPS, 
+    de réaliser un scan automatisé des vulnérabilités, et d’effectuer 
+    des attaques plus ciblées (injection, brute force).  
+    Dans mon projet de 2ème année, j’ai notamment utilisé Burp Suite 
+    pour tester la robustesse des formulaires et identifier d’éventuelles failles 
+    de type <em>SQL Injection</em>, <em>XSS</em> ou <em>IDOR</em>.
+  </p>
+  
+  <p style="margin-bottom: 1rem;">
+    <strong>Ressources consultées&nbsp;:</strong><br>
+    • Documentation officielle de PortSwigger (<a href="https://portswigger.net/burp" target="_blank">portswigger.net/burp</a>)<br>
+    • Tutoriels YouTube sur la configuration du proxy Burp (avec ou sans certificat) et la lecture 
+      des requêtes dans l’onglet “Proxy”<br>
+    • Blogs de chercheurs en sécurité démontrant des <em>use cases</em> concrets (ex. exploitation XSS)<br>
+    • OWASP Testing Guide pour recouper certaines étapes (ex. fuzzing, injection)
+  </p>
+  
+  <p style="margin-bottom: 1rem;">
+    <strong>Ce que j’ai appris&nbsp;:</strong><br>
+    • Le fonctionnement détaillé du proxy d’interception pour modifier “à la volée” 
+      les requêtes et réponses<br>
+    • Comment utiliser le module “Repeater” pour rejouer une requête en bouclant sur différentes 
+      valeurs (test d’injection, bypass de validations)<br>
+    • L’importance de la planification d’un test d’intrusion (cibler les pages critiques, 
+      authentification, zones d’upload, etc.)<br>
+    • Les limites de Burp Suite Free comparées à la version Pro (scan automatique avancé, etc.)
+  </p>
+  
+  <p>
+    <strong>Perspectives&nbsp;:</strong><br>
+    Burp Suite est un outil qu’on retrouve dans de nombreux scénarios de tests d’intrusion.  
+    À l’avenir, je souhaite approfondir l’automatisation de tâches via des extensions 
+    (BApp Store), et mieux maîtriser les scans en profondeur pour accélérer la phase 
+    de “reconnaissance” sur les cibles web.
+  </p>
+</section>
+
+<section style="margin-bottom: 2rem;">
+  <h2 style="margin-bottom: 1rem;">Veille n°7 : OWASP ZAP (Zed Attack Proxy)</h2>
+  
+  <p style="margin-bottom: 1rem;">
+    <strong>Pourquoi cet outil&nbsp;?</strong><br>
+    OWASP ZAP est un proxy similaire à Burp Suite, mais entièrement open source et soutenu 
+    par la communauté OWASP. Il offre des fonctionnalités de scan automatique 
+    et d’analyse des applications web (recherche de liens, injection, XSS, etc.).  
+    Dans mon projet, ZAP a été utilisé pour extraire toutes les URLs d’un site (scope du bounty) 
+    afin de les analyser et d’y appliquer différents tests en automatisant une partie du “recon”.
+  </p>
+  
+  <p style="margin-bottom: 1rem;">
+    <strong>Ressources consultées&nbsp;:</strong><br>
+    • Documentation officielle sur <a href="https://www.zaproxy.org" target="_blank">zaproxy.org</a><br>
+    • Guides OWASP (ex. <em>OWASP Testing Guide</em>) pour la méthodologie d’audit<br>
+    • Tutoriels vidéo portant sur l’installation, la configuration du proxy, et la fonction 
+      d’exploration automatique (spider)<br>
+    • Discussions sur les forums GitHub d’OWASP ZAP concernant l’extension de scripts 
+      (scripts Python/Groovy pour personnaliser le scan)
+  </p>
+  
+  <p style="margin-bottom: 1rem;">
+    <strong>Ce que j’ai appris&nbsp;:</strong><br>
+    • Comment lancer un “spider” pour recenser toutes les pages d’une application web 
+      et détecter d’éventuels formulaires vulnérables<br>
+    • Paramétrer des alertes automatiques (XSS, SQLi, etc.) et comprendre 
+      comment ZAP interprète les résultats<br>
+    • La différence entre un scan passif (analyse du trafic déjà capturé) 
+      et un scan actif (tests d’injection ou d’énumération)<br>
+    • L’intérêt de combiner ZAP avec d’autres scripts Python pour filtrer 
+      ou trier les URLs récupérées
+  </p>
+  
+  <p>
+    <strong>Perspectives&nbsp;:</strong><br>
+    ZAP s’intègre très bien dans un workflow DevSecOps, en l’automatisant 
+    (CI/CD). Je compte explorer ces fonctionnalités avancées pour détecter 
+    en continu les régressions de sécurité et générer des rapports de vulnérabilités 
+    directement lors du déploiement d’une application web.
+  </p>
+</section>
