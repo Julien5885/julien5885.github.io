@@ -1,211 +1,61 @@
 ---
 layout: page
-title: Projets école
+title: "Projets École"
 ---
 
-<h1>Mes projets réalisés à l’école</h1>
-
-<!-- Conteneur des onglets -->
-<div class="tabs">
-    <button class="tab-button active" onclick="openTab(event, 'projets-entreprise')" style="height: auto; padding: 8px 20px;">
-        Projets en école
-    </button>
-    <button class="tab-button" onclick="openTab(event, 'projets-ecole')" style="height: auto; padding: 8px 20px;">
-        Projets en entreprise
-    </button>
+<!-- BLOC BOUTONS -->
+<div class="button-group">
+  <!-- Le .button et .special sont des classes du thème Spectral 
+       (HTML5 UP) qui affichent des boutons stylés -->
+  <a href="#premiere-annee" class="button special">Projets de 1ère Année</a>
+  <a href="#deuxieme-annee" class="button">Projets de 2ème Année</a>
 </div>
 
-<!-- Contenu des projets en école -->
-<div id="projets-entreprise" class="tab-content active">
-    <h3>Projets réalisés à l'école</h3>
-    
-    <h4>Projet de première année : JumpX</h4>
-    <img src="{{ site.baseurl }}css/images/projets/JumpX.png" alt="Aperçu du Réseau social d’entreprise" class="projet-image">
-    <p>
-        JumpX est la toute première application mobile que nous avons créée en équipe durant la première année de notre BTS SIO option SLAM. 
-        Ce projet nous a permis de mettre en pratique toutes les compétences demandées dans le cadre du Bloc 1 du BTS, à savoir :
-    </p>
+<!-- SECTION 1ère ANNEE -->
+<section id="premiere-annee">
+  <h2>Projets de 1ère Année</h2>
+
+  <!-- Exemple d’un premier projet -->
+  <article class="project">
+    <h3>Projet #1 (1ère année)</h3>
     <ul>
-        <li>Analyse des besoins et de la demande du client.</li>
-        <li>Utilisation du logiciel GANTT pour planifier et organiser le projet.</li>
-        <li>Réalisation du Modèle Conceptuel de Données (MCD) pour structurer les bases de données.</li>
-        <li>Création des maquettes pour représenter visuellement l’application avant son développement.</li>
+      <li><strong>📌 Titre du projet :</strong> [Titre]</li>
+      <li><strong>🏫 Contexte :</strong> École, 1ère année</li>
+      <li><strong>🛠️ Technologies utilisées :</strong> [Liste des technos]</li>
+      <li><strong>🧠 Objectif :</strong> [Objectif pédagogique]</li>
+      <li><strong>🎯 Mon rôle :</strong> [Ce que j’ai fait]</li>
+      <li><strong>🖼️ Images :</strong> 
+        <!-- <img src="assets/images/ecole/projet1.png" alt="Capture projet 1ère année" /> -->
+      </li>
+      <li><strong>🔗 Lien GitHub :</strong> 
+        <!-- <a href="https://github.com/MonPseudo/MonProjet">Repo</a> -->
+      </li>
     </ul>
-    <p>
-        JumpX est une plateforme conçue avec Eclipse et Java, destinée à être un réseau social pour entreprises, facilitant la communication et la collaboration de manière sécurisée.
-    </p>
-    
-    <h4>Projet de deuxième année - RFTG</h4>
-    <p>
-        RFTG est une application de gestion de location de DVD développée pour répondre aux besoins d’un village de vacances. Ce projet, réalisé en deuxième année, est divisé en deux parties distinctes :
-    </p>
+  </article>
+
+  <!-- Ajoute d’autres articles pour chaque projet de 1ère année -->
+</section>
+
+<!-- SECTION 2e ANNEE -->
+<section id="deuxieme-annee">
+  <h2>Projets de 2ème Année</h2>
+
+  <article class="project">
+    <h3>Projet #1 (2ème année)</h3>
     <ul>
-        <li><strong>Mario :</strong> une application web destinée à la gestion du stock des DVD, utilisée par le gérant et ses employés.</li>
-        <li><strong>Luigi :</strong> une application mobile permettant aux clients du centre de vacances de louer des DVD facilement.</li>
+      <li><strong>📌 Titre du projet :</strong> [Titre]</li>
+      <li><strong>🏫 Contexte :</strong> École, 2ème année</li>
+      <li><strong>🛠️ Technologies utilisées :</strong> [Liste des technos]</li>
+      <li><strong>🧠 Objectif :</strong> [Objectif pédagogique]</li>
+      <li><strong>🎯 Mon rôle :</strong> [Ce que j’ai fait]</li>
+      <li><strong>🖼️ Images :</strong> 
+        <!-- <img src="assets/images/ecole/projet2.png" alt="Capture projet 2ème année" /> -->
+      </li>
+      <li><strong>🔗 Lien GitHub :</strong> 
+        <!-- <a href="https://github.com/MonPseudo/MonProjet2">Repo</a> -->
+      </li>
     </ul>
-    <p>
-        Ce projet nous a permis de travailler sur plusieurs technologies et outils avancés :
-    </p>
-    <ul>
-        <li>Back-end en <strong>Spring Boot</strong> pour assurer une API robuste et performante.</li>
-        <li>Front-end en <strong>Laravel</strong> pour une interface ergonomique et moderne.</li>
-        <li>Utilisation de <strong>VS Code</strong> et <strong>XAMPP</strong> pour le développement.</li>
-        <li>Réalisation des maquettes et du MCD pour définir clairement l’architecture du projet.</li>
-    </ul>
-    <p>
-        Ce projet nous a permis de consolider nos compétences en développement web et mobile, tout en mettant en place une solution complète et fonctionnelle adaptée aux besoins du client.
-    </p>
-</div>
+  </article>
 
-<!-- Contenu des projets en entreprise -->
-<div id="projets-ecole" class="tab-content">
-    <h3>Projets réalisés en entreprise</h3>
-    
-    <h4>Projet unique : Automatisation de la recherche de vulnérabilités web</h4>
-    <p>
-        Dans le cadre de mon alternance, j’ai participé à un projet crucial visant à automatiser l’identification des vulnérabilités potentielles sur un site web. 
-        Ce projet a été développé en équipe de trois personnes et a permis de mettre en place une solution efficace pour faciliter l’audit de sécurité des applications web.
-    </p>
-
-    <h5>🔎 Objectif du projet</h5>
-    <p>
-        L’objectif principal était de <strong>réduire le temps consacré à l’analyse de sécurité manuelle</strong> en automatisant la recherche d’éléments critiques présents dans le code source des pages web. 
-        Cette automatisation permet d’identifier rapidement des pages susceptibles de présenter des vulnérabilités, en effectuant des analyses ciblées sur certains critères :
-    </p>
-    <ul>
-        <li>✔ <strong>Présence de formulaires d’authentification</strong>, souvent vulnérables aux attaques de type brute force.</li>
-        <li>✔ <strong>Présence ou absence de CAPTCHA</strong>, qui constitue une barrière supplémentaire contre les bots malveillants.</li>
-        <li>✔ <strong>Utilisation de JWT (JSON Web Token)</strong>, qui peut être une faille si mal implémenté.</li>
-    </ul>
-
-    <h5>🛠 Technologies et approche utilisées</h5>
-    <p>Ce projet repose sur une architecture en trois étapes distinctes :</p>
-    
-    <h6>1️⃣ Extraction du code HTML des pages web</h6>
-    <ul>
-        <li><strong>Langage :</strong> Python</li>
-        <li><strong>Outil :</strong> KaliLinux</li>
-        <li><strong>Fonction :</strong> Récupération via ZAP des URLs et récupération automatique du code HTML d’un site web cible afin d’obtenir une base de travail pour l’analyse de sécurité.</li>
-    </ul>
-
-    <h6>2️⃣ Recherche de mots-clés critiques</h6>
-    <ul>
-        <li><strong>Langage :</strong> Java</li>
-        <li><strong>Fonction :</strong> Analyse du code source en recherchant des indicateurs liés à la sécurité.</li>
-        <li><strong>Critères analysés :</strong>
-            <ul>
-                <li>Identifiants de formulaires (<code>&lt;form&gt;</code> avec <code>input type="password"</code>)</li>
-                <li>Absence de CAPTCHA (<code>&lt;input&gt;</code> contenant le mot <code>captcha</code>)</li>
-                <li>Présence d'appel dAPI relatif aux JWT (jeton unique d'authentification) (<code>Authorization: Bearer &lt;token&gt;</code> dans les headers ou cookies)</li>
-            </ul>
-        </li>
-    </ul>
-
-    <h6>3️⃣ Gestion et affichage des résultats</h6>
-    <ul>
-        <li><strong>Framework :</strong> Laravel</li>
-        <li><strong>Fonctionnalités :</strong> Interface utilisateur permettant d'afficher les pages analysées, les URL à vérifier et les recommandations.</li>
-    </ul>
-
-    <h5>⏳ Un gain de temps considérable pour les audits de sécurité</h5>
-    <p>
-        Avant cette automatisation, l’analyse de sécurité d’un site nécessitait une vérification manuelle de chaque page, ce qui était fastidieux et chronophage. 
-        Avec ce programme, <strong>l’identification des pages à haut risque est instantanée</strong>, ce qui permet aux analystes de se concentrer directement sur l’exploitation et la correction des failles.
-    </p>
-    <ul>
-        <li>✅ <strong>Automatisation du repérage des zones sensibles</strong> : Le script identifie en quelques secondes les pages potentiellement vulnérables.</li>
-        <li>✅ <strong>Optimisation des audits de cybersécurité</strong> : Moins de travail manuel, plus de rapidité dans la prise de décision.</li>
-        <li>✅ <strong>Amélioration de la sécurité des applications</strong> : Grâce à une détection plus rapide et efficace des failles.</li>
-    </ul>
-
-    <h5>📌 Conclusion</h5>
-    <p>
-        Ce projet a été une expérience extrêmement enrichissante. Il m’a permis d’approfondir mes compétences en 
-        <strong>développement full-stack (Python, Java, Laravel)</strong> et en <strong>cybersécurité</strong>, tout en travaillant en équipe sur une problématique réelle. 
-        L’outil développé constitue aujourd’hui une base précieuse pour les audits de sécurité et pourrait être amélioré avec des algorithmes de machine learning pour détecter encore plus efficacement les menaces.
-    </p>
-</div>
-
-
-<!-- JavaScript pour gérer les onglets -->
-<script>
-function openTab(event, tabName) {
-    var i, tabContent, tabButtons;
-
-    // Cacher tous les contenus des onglets
-    tabContent = document.getElementsByClassName("tab-content");
-    for (i = 0; i < tabContent.length; i++) {
-        tabContent[i].style.display = "none";
-    }
-
-    // Désactiver tous les boutons d'onglets
-    tabButtons = document.getElementsByClassName("tab-button");
-    for (i = 0; i < tabButtons.length; i++) {
-        tabButtons[i].classList.remove("active");
-    }
-
-    // Afficher l'onglet sélectionné et activer le bouton
-    document.getElementById(tabName).style.display = "block";
-    event.currentTarget.classList.add("active");
-}
-</script>
-
-<!-- CSS adapté au design du site -->
-<style>
-.projet-image {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    display: block;
-    margin: 10px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Alignement des onglets */
-.tabs {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-/* Boutons des onglets */
-.tab-button {
-    background-color: #26A69A;
-    border: 2px solid white;
-    color: white;
-    padding: 12px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 0 10px;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.tab-button:hover {
-    background-color: #1F8A77;
-}
-
-.tab-button.active {
-    background-color: white;
-    color: #26A69A;
-}
-
-/* Style du contenu des onglets */
-.tab-content {
-    display: none;
-    text-align: left;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: auto;
-}
-
-/* Afficher l'onglet actif */
-.tab-content.active {
-    display: block;
-}
-</style>
+  <!-- Ajoute d’autres articles pour chaque projet de 2ème année -->
+</section>
