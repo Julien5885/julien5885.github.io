@@ -88,175 +88,89 @@ nav_order: 3
 <section id="deuxieme-annee">
   <h2>Projets de 2ème Année</h2>
 
- <article class="project" style="margin-bottom: 2rem;">
-  <h3 style="margin-bottom: 1rem;">
-    Projet #1 (2ème année) — RFTG (Gestion de location de DVD)
-  </h3>
-
----
-layout: page
-title: "Projets en formation"
-nav_order: 3
----
-<article class="project" style="margin-bottom: 2rem;">
-  <ul style="list-style: none; padding-left: 0;">
-
----
-layout: page
-title: "Projets en formation"
-nav_order: 3
----
-
-<!-- BLOC BOUTONS -->
-<ul class="actions" style="margin-bottom: 2rem;">
-  <li><a href="#premiere-annee" class="button special">Projets de 1ère Année</a></li>
-  <li><a href="#deuxieme-annee" class="button">Projets de 2ème Année</a></li>
-</ul>
-
-<!-- SECTION 1ère ANNEE -->
-<article class="project" style="margin-bottom: 2rem;">
-  <h3 style="margin-bottom: 1rem;">
-    Projet #1 (1ère année) — Réseau social pour entreprise (JumpX)
-  </h3>
-  
-  <ul style="list-style: none; padding-left: 0;">
-    <!-- Titre du Projet -->
-    <li style="margin-bottom: 1rem;">
-      <strong>Titre du projet :</strong><br>
-      Réseau social pour entreprise (JumpX)
-    </li>
-
-    <!-- Contexte -->
-    <li style="margin-bottom: 1rem;">
-      <strong>Contexte :</strong><br>
-      Réalisé en 1ère année de formation au sein d’une équipe de trois.
-      Nous n’avions que très peu de bases en développement au départ.
-    </li>
-
-    <!-- Technologies et Outils -->
-    <li style="margin-bottom: 1rem;">
-      <strong>Technologies et outils utilisés :</strong><br><br>
-      <ul style="margin-left: 1.5rem; list-style-type: disc;">
-        <li>Looping (MCD)</li>
-        <li>Gantt</li>
-        <li>XAMPP</li>
-        <li>Eclipse</li>
-        <li>Laravel</li>
-        <li>Composer</li>
-        <li>Node.js</li>
-        <li>Miro</li>
-      </ul>
-    </li>
-
-    <!-- Objectif -->
-    <li style="margin-bottom: 1rem;">
-      <strong>Objectif :</strong><br>
-      Créer un outil favorisant la communication entre les collaborateurs via commentaires, publications, etc.
-    </li>
-
-    <!-- Rôle -->
-    <li style="margin-bottom: 1rem;">
-      <strong>Mon rôle :</strong><br>
-      Analyse des besoins, proposition d’idées, suivi de projet.
-    </li>
-
-    <!-- Illustrations -->
-    <li style="margin-bottom: 1rem;">
-      <strong>Illustrations :</strong><br>
-      • Logo de l’application JumpX<br>
-      • Maquettes de l’écran de connexion et navigation<br>
-    </li>
-
-    <!-- GitHub -->
-    <li>
-      <strong>Lien GitHub :</strong><br>
-      Aucun dépôt public
-    </li>
-  </ul>
-</article>
-
-<!-- SECTION 2ème ANNEE -->
-<section id="deuxieme-annee">
-  <h2>Projets de 2ème Année</h2>
-
+  <!-- Présentation globale RFTG -->
   <article class="project" style="margin-bottom: 2rem;">
-    <h3 style="margin-bottom: 1rem;">
-      Projet #2 (2ème année) — Projet RFTG : Mario (application web - gestion de stock DVD)
-    </h3>
-
+    <h3 style="margin-bottom: 1rem;">Projet #1 (2ème année) — RFTG : Location de DVD</h3>
     <ul style="list-style: none; padding-left: 0;">
       <li style="margin-bottom: 1rem;">
-        <strong>Titre du projet :</strong><br>
-        RFTG - Mario : application web de gestion du stock de DVD pour le personnel habilité d’un village de vacances.
+        <strong>Titre :</strong><br>
+        RFTG est un projet complet de gestion de location de DVD développé en deuxième année de BTS SIO, dans un contexte d’équipe étendue.
       </li>
-
       <li style="margin-bottom: 1rem;">
-        <strong>Contexte :</strong><br>
-        Mario fait partie du projet RFTG, une solution de location de DVD conçue en deux applications :
+        <strong>Structure du projet :</strong><br>
+        Il se compose de deux applications reliées à un même backend Java (Spring Boot) et une base de données commune nommée <code>Peach</code> :
         <ul style="margin-left: 1.5rem; list-style-type: disc;">
-          <li><strong>Mario</strong> : application web Laravel, pour le personnel (gestion des stocks)</li>
-          <li><strong>Luigi</strong> : application mobile Android, pour les clients (location de DVD)</li>
-        </ul>
-        Ces deux interfaces partagent une base de données commune nommée <code>Peach</code> et communiquent avec un backend unique développé en <strong>Spring Boot</strong> (API REST).
-      </li>
-
-      <li style="margin-bottom: 1rem;">
-        <strong>Technologies :</strong>
-        <ul style="margin-left: 1.5rem; list-style-type: disc;">
-          <li>Laravel + Blade</li>
-          <li>Spring Boot (Java - REST API)</li>
-          <li>GuzzleHTTP (appel d’API entre Laravel et Spring)</li>
-          <li>XAMPP pour les tests locaux</li>
-          <li>Looping pour le MCD</li>
-          <li>Miro pour les maquettes</li>
+          <li><strong>Mario</strong> : Application web dédiée au personnel (gestion du stock, inventaire)</li>
+          <li><strong>Luigi</strong> : Application mobile à destination des clients (consultation et location de films)</li>
         </ul>
       </li>
-
       <li style="margin-bottom: 1rem;">
-        <strong>Fonctionnalités principales :</strong>
-        <ul style="margin-left: 1.5rem; list-style-type: disc;">
-          <li>Connexion via table <code>staff</code></li>
-          <li>Affichage, recherche, modification, suppression de films</li>
-          <li>Ajout d’exemplaires dans l’inventaire</li>
-        </ul>
-      </li>
-
-      <li style="margin-bottom: 1rem;">
-        <strong>Spécificités techniques :</strong>
-        <ul style="margin-left: 1.5rem; list-style-type: disc;">
-          <li>Abandon temporaire de Eloquent à cause de conflits avec phpMyAdmin (typages non standards)</li>
-          <li>Connexion sans hachage (choix pour tests locaux)</li>
-          <li>Utilisation des logs Laravel pour le debug</li>
-          <li>Tests manuels fonctionnels : recherche, validation, suppression, erreurs 404/500 gérées</li>
-        </ul>
-      </li>
-
-      <li style="margin-bottom: 1rem;">
-        <strong>Suivi et organisation :</strong>
-        <ul style="margin-left: 1.5rem; list-style-type: disc;">
-          <li>MCD produit avec Looping</li>
-          <li>Maquettes conçues avec Miro</li>
-          <li>Recette validée progressivement</li>
-        </ul>
-      </li>
-
-      <li style="margin-bottom: 1rem;">
-        <strong>Captures à insérer :</strong>
-        <ul style="margin-left: 1.5rem; list-style-type: disc;">
-          <li>Page de connexion <code>assets/images/ecole/mario_connexion.png</code></li>
-          <li>Tableau de bord <code>assets/images/ecole/mario_accueil.png</code></li>
-          <li>Liste des films <code>assets/images/ecole/mario_liste_films.png</code></li>
-          <li>Formulaire ajout inventaire <code>assets/images/ecole/mario_ajout_inventaire.png</code></li>
-          <li>MCD <code>assets/images/ecole/mario_mcd.png</code></li>
-        </ul>
-      </li>
-
-      <li>
-        <strong>Mon rôle :</strong><br>
-        J’ai développé toute l’application Mario sous Laravel, en lien avec le backend Spring Boot. Tests, débogage, ergonomie, intégration visuelle et fonctionnelle assurés.
+        <strong>Backend commun :</strong><br>
+        Le backend développé avec <strong>Spring Boot</strong> expose des API REST accessibles depuis les deux interfaces. Le projet utilise également des logs et des outils de tests pour assurer la fiabilité des échanges.
       </li>
     </ul>
   </article>
 
-  <!-- Ajoute d’autres articles pour chaque projet de 2ème année -->
+  <!-- Présentation détaillée de Mario -->
+  <article class="project" style="margin-bottom: 2rem;">
+    <h3 style="margin-bottom: 1rem;">Focus — Application web "Mario"</h3>
+    <ul style="list-style: none; padding-left: 0;">
+
+      <li style="margin-bottom: 1rem;">
+        <strong>Contexte :</strong><br>
+        Mario est l’application web utilisée par les gérants ou membres du staff d’un village de vacances pour gérer les stocks de DVD.
+      </li>
+
+      <li style="margin-bottom: 1rem;">
+        <strong>Fonctionnalités :</strong>
+        <ul style="margin-left: 1.5rem; list-style-type: disc;">
+          <li>Connexion du personnel via la table <code>staff</code> (base Peach)</li>
+          <li>Consultation, modification et suppression de films</li>
+          <li>Ajout d’exemplaires (inventaire)</li>
+        </ul>
+      </li>
+
+      <li style="margin-bottom: 1rem;">
+        <strong>Contraintes techniques :</strong>
+        <ul style="margin-left: 1.5rem; list-style-type: disc;">
+          <li>Abandon temporaire d’Eloquent (Laravel) pour éviter des incompatibilités avec la structure PHPMyAdmin</li>
+          <li>Connexion sans hashage de mots de passe (dans un but de test local)</li>
+          <li>Utilisation de <strong>GuzzleHTTP</strong> pour communiquer avec les Web Services Java</li>
+        </ul>
+      </li>
+
+      <li style="margin-bottom: 1rem;">
+        <strong>Suivi et méthodologie :</strong>
+        <ul style="margin-left: 1.5rem; list-style-type: disc;">
+          <li>Maquettes créées avec Miro (connexion, liste des films, inventaire)</li>
+          <li>Modèle Conceptuel de Données conçu sur Looping</li>
+          <li>Tests manuels et logs Laravel pour assurer la traçabilité</li>
+        </ul>
+      </li>
+
+      <li style="margin-bottom: 1rem;">
+        <strong>Captures d’écran suggérées :</strong>
+        <ul style="margin-left: 1.5rem; list-style-type: disc;">
+          <li><code>assets/images/ecole/mario_connexion.png</code> – Connexion à la base Peach</li>
+          <li><code>assets/images/ecole/mario_accueil.png</code> – Accueil avec les options de gestion</li>
+          <li><code>assets/images/ecole/mario_liste_films.png</code> – Liste des films avec recherche</li>
+          <li><code>assets/images/ecole/mario_inventaire.png</code> – Gestion de l’inventaire</li>
+          <li><code>assets/images/ecole/mario_mcd.png</code> – MCD du projet Peach</li>
+        </ul>
+      </li>
+
+      <li style="margin-bottom: 1rem;">
+        <strong>Mon rôle :</strong><br>
+        Développement complet du frontend Laravel (Mario), connexion à l’API Java (Spring Boot), intégration HTML/CSS des interfaces et test local via XAMPP.
+      </li>
+
+      <li>
+        <strong>Lien GitHub :</strong><br>
+        <a href="https://github.com/RFTG-2nd-annee/Toad" target="_blank">
+          https://github.com/RFTG-2nd-annee/Toad
+        </a>
+      </li>
+
+    </ul>
+  </article>
 </section>
