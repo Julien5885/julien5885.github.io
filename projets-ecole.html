@@ -93,91 +93,119 @@ nav_order: 3
     Projet #1 (2ème année) — RFTG (Gestion de location de DVD)
   </h3>
 
-  <ul style="list-style: none; padding-left: 0;">
-    <!-- Contexte -->
-    <li style="margin-bottom: 1rem;">
-      <strong>RFTG est une application de gestion de location de DVD</strong> 
-      développée pour répondre aux besoins d’un village de vacances. Réalisé en 
-      2ème année dans le cadre de la formation, ce projet était mené en équipe.
-      <br><br>
-      Il se décline en deux parties&nbsp;:
-      <ul style="margin-left: 1.5rem; list-style-type: disc;">
-        <li>Une <strong>application web</strong> pour la gestion du stock (gérant, employés)</li>
-        <li>Une <strong>application mobile</strong> destinée aux clients (location de DVD)</li>
-      </ul>
-    </li>
+---
+layout: page
+title: "Projets en formation"
+nav_order: 3
+---
 
-    <!-- Titre du projet -->
-    <li style="margin-bottom: 1rem;">
-      <strong>📌 Titre du projet :</strong><br>
-      RFTG
-    </li>
+<!-- BLOC BOUTONS -->
+<ul class="actions" style="margin-bottom: 2rem;">
+  <li><a href="#premiere-annee" class="button special">Projets de 1ère Année</a></li>
+  <li><a href="#deuxieme-annee" class="button">Projets de 2ème Année</a></li>
+</ul>
 
-    <!-- Contexte (formation) -->
-    <li style="margin-bottom: 1rem;">
-      <strong>🏫 Contexte :</strong><br>
-      Formation 2ème année, travail en équipe de 15 personnes, avec partage des tâches 
-      (backend, frontend, mobile…).
-    </li>
+<!-- SECTION 1ère ANNEE -->
+<!-- (Contenu conservé ci-dessus) -->
 
-    <!-- Technologies et Outils -->
-    <li style="margin-bottom: 1rem;">
-      <strong>🛠️ Technologies et outils utilisés :</strong><br><br>
-      <ul style="margin-left: 1.5rem; list-style-type: disc;">
-        <li><strong>XAMPP</strong> : serveur web local incluant Apache/MySQL/PHP</li>
-        <li><strong>Laravel</strong> : framework PHP pour la partie web (frontend + MVC)</li>
-        <li><strong>Composer</strong> : gestionnaire de dépendances PHP</li>
-        <li><strong>Spring Boot</strong> : pour le backend Java (web services / API REST)</li>
-        <li><strong>Android Studio</strong> : développement de l’application mobile (Java/Kotlin)</li>
-        <li><strong>Visual Studio Code</strong> : IDE pour la partie Laravel et JavaScript</li>
-        <li><strong>Miro</strong> : création des maquettes et diagrammes collaboratifs</li>
-        <li><strong>Looping (MCD)</strong> : élaboration du Modèle Conceptuel de Données</li>
-      </ul>
-    </li>
+<!-- SECTION 2e ANNEE -->
+<section id="deuxieme-annee">
+  <h2>Projets de 2ème Année</h2>
 
-    <!-- Objectif -->
-    <li style="margin-bottom: 1rem;">
-      <strong>🧠 Objectif :</strong><br>
-      Créer deux applications complémentaires&nbsp;: 
-      <ul style="margin-left: 1.5rem; list-style-type: disc;">
-        <li>Une application <strong>web</strong> pour gérer le stock des DVD (ajout, suppression, suivi des réservations)</li>
-        <li>Une application <strong>mobile</strong> pour permettre aux clients de louer des DVD facilement</li>
-      </ul>
-    </li>
+  <article class="project" style="margin-bottom: 2rem;">
+    <h3 style="margin-bottom: 1rem;">
+      Projet #2 (2ème année) — Application web "Mario" (gestion de stock DVD)
+    </h3>
 
-    <!-- Rôle -->
-    <li style="margin-bottom: 1rem;">
-      <strong>🎯 Mon rôle :</strong><br>
-      J’ai contribué à la conception du web service (Spring Boot) avec l’équipe et 
-      j’ai personnellement développé le <em>frontend</em> sous Laravel, en utilisant 
-      Composer et Node pour installer et gérer les dépendances.
-    </li>
+    <ul style="list-style: none; padding-left: 0;">
 
-    <!-- Images -->
-    <li style="margin-bottom: 1rem;">
-      <strong>🖼️ Images :</strong><br>
-      Possibilités d’illustrations&nbsp;:
-      <ul style="margin-left: 1.5rem; list-style-type: disc;">
-        <li>Capture d’écran de l’application web (interface de gestion du stock)</li>
-        <li>Vue de l’application mobile (location de DVD)</li>
-        <li>Schéma de l’architecture (API REST entre le web service et les clients)</li>
-        <li>MCD (Modèle Conceptuel de Données)</li>
-      </ul>
-      <!-- 
-         Ex.: 
-         <img src="assets/images/ecole/rftg_web.png" alt="Application web de RFTG" />
-         <img src="assets/images/ecole/rftg_mobile.png" alt="Application mobile de RFTG" />
-      -->
-    </li>
+      <!-- Titre et contexte -->
+      <li style="margin-bottom: 1rem;">
+        <strong>Titre :</strong><br>
+        Mario - Interface web pour gérants et personnel habilité d'un village de vacances.
+      </li>
 
-    <!-- Lien GitHub -->
-    <li>
-      <strong>🔗 Lien GitHub :</strong><br>
-      <a href="https://github.com/RFTG-2nd-annee/Toad" target="_blank">
-        https://github.com/RFTG-2nd-annee/Toad
-      </a>
-    </li>
-  </ul>
+      <li style="margin-bottom: 1rem;">
+        <strong>Contexte :</strong><br>
+        Cette application a été réalisée dans le cadre de notre 2ème année de formation BTS SIO. Elle constitue le pendant web (côté staff) du projet global "RFTG". Elle permet au personnel de gérer le catalogue de films et les exemplaires disponibles à la location.
+      </li>
+
+      <!-- Architecture -->
+      <li style="margin-bottom: 1rem;">
+        <strong>Architecture :</strong><br>
+        L'application est reliée à une base de données commune (nommée "Peach") à deux frontaux&nbsp;:
+        <ul style="margin-left: 1.5rem; list-style-type: disc;">
+          <li><strong>Mario</strong> : application web Laravel, réservée au personnel</li>
+          <li><strong>Luigi</strong> : application mobile pour les clients</li>
+        </ul>
+      </li>
+
+      <!-- Technologies -->
+      <li style="margin-bottom: 1rem;">
+        <strong>Technologies et outils :</strong>
+        <ul style="margin-left: 1.5rem; list-style-type: disc;">
+          <li>Laravel (PHP) pour la création des vues et l'organisation du code MVC</li>
+          <li>Blade pour les gabarits dynamiques</li>
+          <li>Spring Boot (Java) pour l'API REST backend</li>
+          <li>GuzzleHTTP pour la communication entre Laravel et les Web Services Java</li>
+          <li>XAMPP pour l'environnement local (Apache, MySQL)</li>
+          <li>Looping pour le MCD</li>
+          <li>VSCode pour Laravel / Spring Tools Suite pour le backend</li>
+        </ul>
+      </li>
+
+      <!-- Fonctionnalités -->
+      <li style="margin-bottom: 1rem;">
+        <strong>Fonctionnalités :</strong>
+        <ul style="margin-left: 1.5rem; list-style-type: disc;">
+          <li>Connexion basée sur la table <code>staff</code> de la base "Peach"</li>
+          <li>Affichage, recherche, modification et suppression des films</li>
+          <li>Consultation et ajout d'exemplaires (inventaire) d'un film</li>
+        </ul>
+      </li>
+
+      <!-- Particularités techniques -->
+      <li style="margin-bottom: 1rem;">
+        <strong>Spécificités techniques :</strong>
+        <ul style="margin-left: 1.5rem; list-style-type: disc;">
+          <li>Connexion sans hachage des mots de passe pour des raisons de compatibilité avec phpMyAdmin</li>
+          <li>Abandon temporaire d'Eloquent au profit de requêtes HTTP via Guzzle (probable conflit de structure ou typage avec les Web Services)</li>
+          <li>Utilisation de logs pour vérifier le bon acheminement des données</li>
+          <li>Test fonctionnels manuels sur chaque fonctionnalité (CRUD, vérification visuelle, erreurs 404/500 capturées)</li>
+        </ul>
+      </li>
+
+      <!-- Maquettes / MCD / Capture -->
+      <li style="margin-bottom: 1rem;">
+        <strong>Illustrations à intégrer :</strong><br>
+        <ul style="margin-left: 1.5rem; list-style-type: disc;">
+          <li>Capture de la page de connexion Laravel (connectée à la table staff)</li>
+          <li>Maquette de l'accueil (choix : Liste des films / Inventaire)</li>
+          <li>Capture du listing des films (avec recherche, boutons d'action)</li>
+          <li>Extrait du MCD généré sur Looping</li>
+          <li>Capture de l'ajout d'exemplaire depuis la section inventaire</li>
+        </ul>
+      </li>
+
+      <!-- Rôle personnel -->
+      <li style="margin-bottom: 1rem;">
+        <strong>Mon rôle :</strong><br>
+        Participation à la conception du backend en équipe (Spring Boot) et développement complet de l'application "Mario" sous Laravel.
+        Intégration des appels API REST, réalisation des vues, logique de connexion et tests des contrôleurs.
+      </li>
+
+      <!-- Lien Git -->
+      <li>
+        <strong>Lien GitHub :</strong><br>
+        <a href="https://github.com/RFTG-2nd-annee/Toad" target="_blank">
+          https://github.com/RFTG-2nd-annee/Toad
+        </a>
+      </li>
+    </ul>
+  </article>
+</section>
+
+
 </article>
 
 
