@@ -521,4 +521,195 @@ nav_order: 3
 
     </ul>
   </article>
+  <!-- Focus sur "La Boîte à idées" -->
+<article class="project" style="margin-bottom: 2rem;">
+  <h3 style="margin-bottom: 1rem;">
+    Projet #X (2ème année) — La Boîte à idées (Laravel + Sécurisation)
+  </h3>
+
+  <ul style="list-style: none; padding-left: 0;">
+
+    <!-- Contexte et objectifs -->
+    <li style="margin-bottom: 1rem;">
+      <strong>Contexte et objectifs</strong><br><br>
+      Dans le cadre de mon BTS SIO, j’ai développé une application web nommée 
+      <em>“La Boîte à idées”</em>, en utilisant <strong>Laravel</strong>, 
+      <strong>Composer</strong>, <strong>Node.js</strong> et <strong>XAMPP</strong>.  
+      L’objectif est de proposer une plateforme où les utilisateurs peuvent poster leurs idées, 
+      commenter celles des autres et se conformer à des règles métier strictes.  
+      En parallèle, j’ai exploré des bases de la <strong>sécurisation</strong> des applications web 
+      et j’ai intégré un processus de <strong>nettoyage/filtrage</strong> de données compromises 
+      (application concurrente fictive).
+    </li>
+
+    <!-- Règles métier -->
+    <li style="margin-bottom: 1rem;">
+      <strong>Règles métier</strong><br><br>
+      <ul style="margin-left: 1.5rem; list-style-type: disc;">
+        <li>Chaque utilisateur peut soumettre jusqu’à <strong>deux idées par jour</strong>.</li>
+        <li>Un utilisateur peut commenter <strong>jusqu’à trois fois</strong> par idée.</li>
+        <li>Seul l’auteur d’une idée ou d’un commentaire peut le supprimer.</li>
+        <li>Une <strong>charte d’utilisation</strong> a été intégrée afin de formaliser les règles 
+          et assurer la conformité aux normes en vigueur.
+        </li>
+      </ul>
+    </li>
+
+    <!-- Mon approche technique -->
+    <li style="margin-bottom: 1rem;">
+      <strong>Mon approche technique</strong><br><br>
+      J’ai opté pour <strong>Laravel</strong> en raison de son architecture 
+      <em>Modèle-Vue-Contrôleur (MVC)</em> bien structurée :<br><br>
+
+      <ul style="margin-left: 1.5rem; list-style-type: disc;">
+        <li><strong>Modèles (Models)</strong> : entités principales (idées, commentaires). 
+          Exemple : un modèle <code>Idea</code> décrit la structure de chaque idée et sa relation 
+          avec l’utilisateur.
+        </li>
+        <li><strong>Contrôleurs (Controllers)</strong> : gèrent la logique métier (création, 
+          modification, suppression) et vérifient le respect des règles (ex. 
+          <code>IdeaController</code>).
+        </li>
+        <li><strong>Routes</strong> : elles mappent les URL vers les contrôleurs 
+          (afficher, soumettre, commenter, etc.).
+        </li>
+        <li><strong>Vues (Views)</strong> : grâce à Blade, j’ai créé des pages web dynamiques 
+          (liste des idées, page de soumission, etc.).
+        </li>
+      </ul>
+
+      Laravel a également simplifié la gestion de base de données via ses <strong>migrations</strong>, 
+      et ses <strong>middlewares</strong> m’ont permis de gérer 
+      l’authentification et les autorisations.
+    </li>
+
+    <!-- Sécurisation et filtrage des données -->
+    <li style="margin-bottom: 1rem;">
+      <strong>Sécurisation et filtrage des données</strong><br><br>
+      Après avoir implémenté les fonctionnalités principales, j’ai testé la sécurité de l’application 
+      via <strong>Burp Suite</strong> et <strong>OWASP ZAP</strong> sur <strong>Kali Linux</strong>, 
+      afin d’identifier des failles potentielles.  
+      Dans un exercice fictif, j’ai également développé un <strong>programme Java</strong> 
+      (sous Eclipse) pour traiter des données compromises exportées en CSV (application concurrente) :
+      <ul style="margin-left: 1.5rem; list-style-type: disc;">
+        <li>Analyse des fichiers CSV pour <em>détecter</em> des motifs de code malveillant 
+          (expressions régulières).
+        </li>
+        <li><em>Filtrage</em> des données valides (suppression des entrées corrompues).</li>
+        <li><em>Génération</em> d’un fichier CSV “nettoyé”, prêt à être réimporté dans l’application.</li>
+      </ul>
+      Cette partie m’a initié à la <strong>sécurité</strong>, la <strong>manipulation de fichiers CSV</strong> 
+      et l’automatisation du “nettoyage” de données.
+    </li>
+
+    <!-- Présentation dans le portfolio -->
+    <li style="margin-bottom: 1rem;">
+      <strong>Les acquis de ce projet</strong><br><br>
+      Ce projet illustre :
+      <ul style="margin-left: 1.5rem; list-style-type: disc;">
+        <li>Ma capacité à employer des outils modernes (<strong>Laravel</strong>, <strong>Composer</strong>) 
+          pour bâtir une application web complète.
+        </li>
+        <li>Mon sens de la <strong>sécurité informatique</strong> (recherche de failles, filtrage 
+          des données, compatibilité avec des règles métier).
+        </li>
+        <li>Mon respect d’une <strong>architecture MVC</strong> claire (séparation du Modèle, 
+          de la Vue et du Contrôleur).
+        </li>
+        <li>Mon aptitude à traiter un flux de données “corrompues” (programme Java) 
+          et à automatiser le process de vérification.
+        </li>
+      </ul>
+    </li>
+
+    <!-- Ajout de screenshots BAI -->
+<li style="margin-bottom: 1rem;">
+  <strong>Captures d’écran de l’application « La Boîte à idées »</strong><br><br>
+  <ul style="margin-left: 1.5rem; list-style-type: disc;">
+
+    <!-- Écran de connexion -->
+    <li>
+      Écran de connexion
+      <br>
+      <img src="images/ecole/boiteidees_connexion.png" 
+           alt="Boîte à idées – Écran de connexion"
+           style="max-width: 600px; margin-top: 0.5rem;" />
+    </li>
+
+    <!-- Charte à valider -->
+    <li style="margin-top: 1rem;">
+      Charte à valider avant connexion
+      <br>
+      <img src="images/ecole/boiteidees_charte_validation.png" 
+           alt="Boîte à idées – Charte à valider"
+           style="max-width: 600px; margin-top: 0.5rem;" />
+    </li>
+
+    <!-- Lecture de la charte -->
+    <li style="margin-top: 1rem;">
+      Lecture de la charte
+      <br>
+      <img src="images/ecole/boiteidees_charte_lecture.png" 
+           alt="Boîte à idées – Lecture de la charte"
+           style="max-width: 600px; margin-top: 0.5rem;" />
+    </li>
+
+    <!-- Champs de création d’idée -->
+    <li style="margin-top: 1rem;">
+      Champs de création d’idée
+      <br>
+      <img src="images/ecole/boiteidees_creation_idee.png" 
+           alt="Boîte à idées – Création d’idée"
+           style="max-width: 600px; margin-top: 0.5rem;" />
+    </li>
+
+    <!-- Soumission d’idée validée -->
+    <li style="margin-top: 1rem;">
+      Soumission d’idée validée (message)
+      <br>
+      <img src="images/ecole/boiteidees_idee_validee.png" 
+           alt="Boîte à idées – Idée validée"
+           style="max-width: 600px; margin-top: 0.5rem;" />
+    </li>
+
+    <!-- Limitation à 2 idées/jour -->
+    <li style="margin-top: 1rem;">
+      Limitation à 2 idées par jour et par utilisateur
+      <br>
+      <img src="images/ecole/boiteidees_limite_2_idees.png" 
+           alt="Boîte à idées – Limitation à 2 idées/jour"
+           style="max-width: 600px; margin-top: 0.5rem;" />
+    </li>
+
+    <!-- Soumission de commentaire -->
+    <li style="margin-top: 1rem;">
+      Soumission d’un commentaire (message de réussite)
+      <br>
+      <img src="images/ecole/boiteidees_commentaire_ok.png" 
+           alt="Boîte à idées – Commentaire validé"
+           style="max-width: 600px; margin-top: 0.5rem;" />
+    </li>
+
+    <!-- Limitation à 3 commentaires/ idée -->
+    <li style="margin-top: 1rem;">
+      Limitation à 3 commentaires par idée et par utilisateur
+      <br>
+      <img src="images/ecole/boiteidees_limite_3_commentaires.png" 
+           alt="Boîte à idées – Limite de commentaires"
+           style="max-width: 600px; margin-top: 0.5rem;" />
+    </li>
+
+    <!-- Note sur les boutons Modifier/Supprimer -->
+    <li style="margin-top: 1rem;">
+      <em>Note :</em> Les boutons “Modifier” et “Supprimer” n’apparaissent que si 
+      l’utilisateur est l’auteur de l’idée ou du commentaire.
+    </li>
+
+  </ul>
+</li>
+
+
+  </ul>
+</article>
+
 </section>
