@@ -88,8 +88,19 @@ nav_order: 3
 <section id="deuxieme-annee">
   <h2>Projets de 2ème Année</h2>
 
-  <!-- Présentation globale RFTG, si besoin -->
-  <!-- … (Ton éventuel article précédent sur RFTG global) … -->
+  <!-- Présentation globale du projet RFTG, si besoin -->
+          <strong>Contexte de réalisation du projet RFTG</strong><br><br>
+        Dans le cadre de la deuxième année de BTS SIO (option SLAM), nous avons développé 
+        en équipe une application web de gestion de stock de DVD destinée à un village de vacances. 
+        Baptisée <em>Mario</em>, elle est dédiée aux gérants et membres habilités (staff) 
+        pour assurer le suivi des films disponibles et l’inventaire des exemplaires. 
+        Connectée à la base de données partagée “Peach”, 
+        elle dialogue également avec l’application mobile <em>Luigi</em> (côté clients).
+        <br><br>
+        Dans ce projet nous avons analysé les besoins, 
+        conçu les maquettes, le MCD (modèle conceptuel de données, mise en œuvre concrète de l'application web (Gestion/Administrateur) et de l'application mobile (Location des films/ Clients). J'ai effectué les test de vérification et 
+        gestion des erreurs (débogage, journalisation). Le déploiement se fera via un serveur fournie par notre hiérarchie.
+      </li>
 
   <!-- Focus sur "Mario" -->
   <article class="project" style="margin-bottom: 2rem;">
@@ -289,6 +300,161 @@ nav_order: 3
           <li>Diagramme d’architecture (Spring Boot ↔ Laravel ↔ MySQL)</li>
         </ul>
       </li> -->
+<!-- Focus sur "Luigi" -->
+<article class="project" style="margin-bottom: 2rem;">
+  <h3 style="margin-bottom: 1rem;">
+    Projet #3 (2ème année) — Luigi (Application Mobile - Location de films)
+  </h3>
+  
+  <ul style="list-style: none; padding-left: 0;">
+
+    <!-- Contexte de réalisation -->
+    <li style="margin-bottom: 1rem;">
+      <strong>Contexte de réalisation</strong><br><br>
+      Dans la continuité du projet RFTG, l’application <em>Luigi</em> représente la version 
+      <strong>mobile client</strong> du système de gestion de DVD développé en 2e année de 
+      BTS SIO option SLAM. Tandis que Mario était destiné aux gérants (back-office), Luigi 
+      permet aux <strong>clients d’un village de vacances</strong> de consulter les films 
+      disponibles, de les ajouter à un panier virtuel et de finaliser leur location.
+      <br><br>
+      Le projet se connecte à la base de données partagée “<em>Peach</em>” via les 
+      <strong>webservices REST</strong> du back-end Spring Boot — le même socle que 
+      pour l’application web Mario.
+    </li>
+
+    <!-- Objectifs -->
+    <li style="margin-bottom: 1rem;">
+      <strong>Objectifs</strong><br><br>
+      <ul style="margin-left: 1.5rem; list-style-type: disc;">
+        <li>Offrir une interface simple et responsive pour consulter les films.</li>
+        <li>Permettre l’ajout de films à un panier (via <code>filmId</code>).</li>
+        <li>Valider la location d’un ou plusieurs films.</li>
+        <li>Envoyer les informations vers <code>inventory</code> et <code>rental</code> 
+          via les webservices existants.</li>
+        <li>Adapter dynamiquement l’URL de l’API (pas de hard-coding).</li>
+        <li>Respecter la structure imposée du backend, sans modifications.</li>
+      </ul>
+    </li>
+
+    <!-- Outils et technologies utilisés -->
+    <li style="margin-bottom: 1rem;">
+      <strong>Outils et technologies utilisés</strong><br><br>
+      <ul style="margin-left: 1.5rem; list-style-type: disc;">
+        <li><strong>Android Studio Giraffe (2022.3.1 Patch 1)</strong> : IDE principal</li>
+        <li><strong>Java (Android SDK 33)</strong> : langage de développement mobile</li>
+        <li><strong>Spring Boot</strong> (REST API partagée, tronc commun RFTG)</li>
+        <li><strong>MySQL</strong> (base Peach)</li>
+        <li><strong>HTTPURLConnection / Threads</strong> : appels asynchrones</li>
+        <li><strong>Figma / Miro</strong> : maquettes d’écrans</li>
+        <li><strong>ArrayList&lt;Integer&gt;</strong> : stockage temporaire du panier</li>
+        <li><strong>JSON / JSONObject</strong> : traitement des réponses API</li>
+        <li><strong>Android Toasts / Logcat</strong> : debug et feedback</li>
+      </ul>
+    </li>
+
+    <!-- Fonctionnement technique -->
+    <li style="margin-bottom: 1rem;">
+      <strong>Fonctionnement technique</strong><br><br>
+
+      <h4 style="margin-bottom: 0.5rem;">Architecture</h4>
+      <p style="margin-bottom: 1rem;">
+        L’application mobile se compose d’une <em>activité principale</em> pour la liste 
+        des films et la navigation, d’un <em>panier</em> gérant les ajouts, et de plusieurs 
+        <em>activités dédiées</em> (connexion, configuration d’URL, détails d’un film, 
+        validation de la location). Le back-end Spring Boot expose des endpoints 
+        <code>/toad/film</code>, <code>/toad/inventory</code>, <code>/toad/rental</code> 
+        pour lire et modifier les données (table <code>inventory</code>, <code>rental</code>).
+      </p>
+
+      <h4 style="margin-bottom: 0.5rem;">Exemple de flux</h4>
+      <p style="margin-bottom: 1rem;">
+        L’utilisateur ajoute un film (<code>filmId</code>) au panier. 
+        Au moment de valider la location :
+      </p>
+      <ul style="margin-left: 1.5rem; list-style-type: disc;">
+        <li>L’app contacte <code>/inventory/available/getById</code> pour trouver un <code>inventory_id</code>.</li>
+        <li>Elle appelle ensuite <code>/rental/add</code> pour insérer la location dans la base.</li>
+        <li>Les données sont insérées réellement, sans simulation.</li>
+      </ul>
+    </li>
+
+    <!-- Particularités techniques -->
+    <li style="margin-bottom: 1rem;">
+      <strong>Particularités techniques</strong><br><br>
+
+      <h4 style="margin-bottom: 0.5rem;">Asynchrone (Thread Java)</h4>
+      <p style="margin-bottom: 1rem;">
+        Les appels aux APIs se font dans des threads séparés (via <code>Thread</code> ou 
+        <code>AsyncTask</code>), pour éviter de bloquer l’UI Thread. Indispensable pour 
+        une application fluide et responsive.
+      </p>
+
+      <h4 style="margin-bottom: 0.5rem;">URL dynamique</h4>
+      <p>
+        Chaque écran récupère une URL configurée (selectedURL) lors de l’ouverture 
+        (via <code>Intent</code>), afin d’éviter les URLs en dur. 
+        Cela facilite le test sur différents réseaux (IP locale, distant).
+      </p>
+    </li>
+
+    <!-- Difficultés rencontrées -->
+    <li style="margin-bottom: 1rem;">
+      <strong>Difficultés rencontrées</strong><br><br>
+      <ul style="margin-left: 1.5rem; list-style-type: disc;">
+        <li>Gestion du stock réel (<code>inventory</code>) et règles backend imposées 
+          par Spring Boot (pas de modif du code serveur).</li>
+        <li>Structure imposée : impossible de contourner l’API, 
+          toutes les opérations passent par les webservices.</li>
+        <li>Nécessité d’associer <code>filmId</code> (côté client) au <code>title</code> 
+          pour affichage, sans perdre la correspondance en base pour <code>rental</code>.</li>
+        <li>Validation multiple : enchaînement de plusieurs appels asynchrones.</li>
+      </ul>
+    </li>
+
+    <!-- Structuration du projet Android -->
+    <li style="margin-bottom: 1rem;">
+      <strong>Structuration du projet Android</strong><br><br>
+      <ul style="margin-left: 1.5rem; list-style-type: disc;">
+        <li><strong>MainActivity</strong> : point d’entrée de l’app (liste des films, navigation)</li>
+        <li><strong>LoginActivity</strong> : écran de connexion (table <code>staff</code>), 
+          ou configuration d’URL + IP</li>
+        <li><strong>URLConfigActivity</strong> : choix/édition de l’URL dynamique (env de dev ou prod)</li>
+        <li><strong>FilmDetailsActivity</strong> : détails d’un film (via <code>filmId</code>) 
+          + bouton “Ajouter au panier”</li>
+        <li><strong>PanierActivity</strong> : affichage des films ajoutés 
+          (avec <code>ArrayList&lt;Integer&gt;</code>), validation</li>
+        <li><strong>Panier.java</strong> : singleton statique pour stocker les <code>filmId</code></li>
+        <li>Layouts XML + ListView / ArrayAdapter / Toast / Log / Intent</li>
+      </ul>
+    </li>
+
+    <!-- Résultat obtenu -->
+    <li style="margin-bottom: 1rem;">
+      <strong>Résultat obtenu</strong><br><br>
+      L’utilisateur peut consulter les films, les ajouter au panier et finaliser 
+      la location. Les enregistrements sont insérés <strong>en base</strong> de manière 
+      réelle (tables <code>inventory</code>, <code>rental</code>), et l’interface 
+      reste fluide grâce aux appels asynchrones. 
+      Le tout se connecte au tronc commun (Spring Boot), garantissant 
+      une <strong>logique centralisée</strong> et évitant la duplication.
+    </li>
+
+    <!-- Lien avec l’application web Mario -->
+    <li style="margin-bottom: 1rem;">
+      <strong>Lien avec l’application web Mario</strong><br><br>
+      Les deux projets <em>Mario</em> et <em>Luigi</em> partagent :
+      <ul style="margin-left: 1.5rem; list-style-type: disc;">
+        <li>La base “<code>Peach</code>” (MySQL)</li>
+        <li>Les webservices REST Spring Boot</li>
+        <li>Une <strong>responsabilité distincte</strong> mais complémentaire : 
+          <strong>Mario</strong> pour le staff (back-office), 
+          <strong>Luigi</strong> pour les clients (front-office)</li>
+      </ul>
+      Ensemble, ils forment la solution complète <strong>RFTG</strong> (Rent For The Guests).
+    </li>
+    
+  </ul>
+</article>
 
       <!-- Lien GitHub -->
       <li>
