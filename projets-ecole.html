@@ -79,7 +79,7 @@ nav_order: 3
     </li>
   </ul>
 </article>
-</section>
+
 
   <!-- Ajout d’autres articles pour chaque projet de 1ère année -->
 
@@ -90,87 +90,130 @@ nav_order: 3
 
   <!-- Présentation globale RFTG -->
   <article class="project" style="margin-bottom: 2rem;">
-    <h3 style="margin-bottom: 1rem;">Projet #1 (2ème année) — RFTG : Location de DVD</h3>
+    <h3 style="margin-bottom: 1rem;">
+      🎬 Projet RFTG – Gestion de location de DVD (2e année BTS SIO)
+    </h3>
+
     <ul style="list-style: none; padding-left: 0;">
+      <!-- Contexte global -->
       <li style="margin-bottom: 1rem;">
-        <strong>Titre :</strong><br>
-        RFTG est un projet complet de gestion de location de DVD développé en deuxième année de BTS SIO, dans un contexte d’équipe étendue.
+        <strong>Contexte global :</strong><br><br>
+        Le projet <em>RFTG (Rent For The Guests)</em> a été réalisé en deuxième année 
+        de BTS SIO dans un cadre pédagogique et collaboratif. Il vise à concevoir 
+        un système complet de gestion de location de DVD pour un village de vacances.
       </li>
+
       <li style="margin-bottom: 1rem;">
-        <strong>Structure du projet :</strong><br>
-        Il se compose de deux applications reliées à un même backend Java (Spring Boot) et une base de données commune nommée <code>Peach</code> :
+        <strong>Deux applications principales :</strong><br><br>
+        Reliées à une <em>base de données</em> commune (Peach) et à un <em>backend Spring Boot (Java)</em> :
         <ul style="margin-left: 1.5rem; list-style-type: disc;">
-          <li><strong>Mario</strong> : Application web dédiée au personnel (gestion du stock, inventaire)</li>
-          <li><strong>Luigi</strong> : Application mobile à destination des clients (consultation et location de films)</li>
+          <li><strong>Mario</strong> : Application web (stock, inventaire, interface gérant)</li>
+          <li><strong>Luigi</strong> : Application mobile (recherche et location de DVD pour les clients)</li>
         </ul>
-      </li>
-      <li style="margin-bottom: 1rem;">
-        <strong>Backend commun :</strong><br>
-        Le backend développé avec <strong>Spring Boot</strong> expose des API REST accessibles depuis les deux interfaces. Le projet utilise également des logs et des outils de tests pour assurer la fiabilité des échanges.
+        L’objectif est de séparer les responsabilités tout en garantissant la cohérence 
+        des données via une <em>architecture REST</em> partagée.
       </li>
     </ul>
   </article>
 
-  <!-- Présentation détaillée de Mario -->
+  <!-- Focus sur "Mario" -->
   <article class="project" style="margin-bottom: 2rem;">
-    <h3 style="margin-bottom: 1rem;">Focus — Application web "Mario"</h3>
+    <h3 style="margin-bottom: 1rem;">
+      🎯 Focus sur l’application web "Mario"
+    </h3>
+
     <ul style="list-style: none; padding-left: 0;">
-
+      <!-- Objectif Mario -->
       <li style="margin-bottom: 1rem;">
-        <strong>Contexte :</strong><br>
-        Mario est l’application web utilisée par les gérants ou membres du staff d’un village de vacances pour gérer les stocks de DVD.
-      </li>
-
-      <li style="margin-bottom: 1rem;">
-        <strong>Fonctionnalités :</strong>
+        <strong>Objectif :</strong><br><br>
+        Développée avec <strong>Laravel (PHP)</strong>, l’application 
+        <strong>Mario</strong> permet au personnel du village de :
         <ul style="margin-left: 1.5rem; list-style-type: disc;">
-          <li>Connexion du personnel via la table <code>staff</code> (base Peach)</li>
-          <li>Consultation, modification et suppression de films</li>
-          <li>Ajout d’exemplaires (inventaire)</li>
+          <li>Gérer les films disponibles (ajout, modification, suppression)</li>
+          <li>Visualiser le stock et ajouter des copies physiques</li>
+          <li>Rechercher un film à l’aide d’un moteur de recherche par mots-clés</li>
         </ul>
       </li>
 
+      <!-- Architecture technique -->
       <li style="margin-bottom: 1rem;">
-        <strong>Contraintes techniques :</strong>
+        <strong>Architecture technique :</strong><br><br>
         <ul style="margin-left: 1.5rem; list-style-type: disc;">
-          <li>Abandon temporaire d’Eloquent (Laravel) pour éviter des incompatibilités avec la structure PHPMyAdmin</li>
-          <li>Connexion sans hashage de mots de passe (dans un but de test local)</li>
-          <li>Utilisation de <strong>GuzzleHTTP</strong> pour communiquer avec les Web Services Java</li>
+          <li><strong>Frontend :</strong> Laravel + Blade (gabarits)</li>
+          <li><strong>Backend / API REST :</strong> Spring Boot (Java)</li>
+          <li><strong>Base de données :</strong> MySQL (base Peach)</li>
+          <li><strong>Communication API :</strong> GuzzleHTTP dans Laravel</li>
+          <li><strong>Environnement local :</strong> XAMPP (Apache + MySQL)</li>
+          <li><strong>MCD :</strong> Conçu sur Looping</li>
+          <li><strong>Maquettes :</strong> Réalisées avec Miro</li>
         </ul>
       </li>
 
+      <!-- Particularités techniques -->
       <li style="margin-bottom: 1rem;">
-        <strong>Suivi et méthodologie :</strong>
+        <strong>Particularités techniques rencontrées :</strong><br><br>
         <ul style="margin-left: 1.5rem; list-style-type: disc;">
-          <li>Maquettes créées avec Miro (connexion, liste des films, inventaire)</li>
-          <li>Modèle Conceptuel de Données conçu sur Looping</li>
-          <li>Tests manuels et logs Laravel pour assurer la traçabilité</li>
+          <li>
+            <em>Connexion simplifiée</em> : la table <code>staff</code> contient des mots de passe non hachés, 
+            uniquement pour des tests et maquettes (pas de prod).
+          </li>
+          <li>
+            <em>Incompatibilité Eloquent</em> : certaines contraintes dans la base 
+            ont empêché l’usage d’Eloquent (ORM), contraignant à recourir 
+            à des requêtes SQL manuelles et à des appels directs aux API Java.
+          </li>
+          <li>
+            <em>Suivi et tests</em> : usage de logs (Laravel) pour repérer erreurs 
+            404/500 et vérifier la connectivité avec les web services.
+          </li>
         </ul>
       </li>
 
+      <!-- Mon rôle -->
       <li style="margin-bottom: 1rem;">
-        <strong>Captures d’écran suggérées :</strong>
+        <strong>Mon rôle :</strong><br><br>
+        J’ai géré l’intégralité du développement de “Mario” :
         <ul style="margin-left: 1.5rem; list-style-type: disc;">
-          <li><code>assets/images/ecole/mario_connexion.png</code> – Connexion à la base Peach</li>
-          <li><code>assets/images/ecole/mario_accueil.png</code> – Accueil avec les options de gestion</li>
-          <li><code>assets/images/ecole/mario_liste_films.png</code> – Liste des films avec recherche</li>
-          <li><code>assets/images/ecole/mario_inventaire.png</code> – Gestion de l’inventaire</li>
-          <li><code>assets/images/ecole/mario_mcd.png</code> – MCD du projet Peach</li>
+          <li>Création des vues Laravel (connexion, liste des films, inventaire…)</li>
+          <li>Appels REST via GuzzleHTTP vers l’API Spring Boot</li>
+          <li>Affichage dynamique des données issues de la base Peach</li>
+          <li>Intégration HTML/CSS, maquettes sous Miro, MCD sur Looping</li>
+          <li>Tests unitaires et débogage local (XAMPP)</li>
         </ul>
       </li>
 
+      <!-- Illustrations -->
       <li style="margin-bottom: 1rem;">
-        <strong>Mon rôle :</strong><br>
-        Développement complet du frontend Laravel (Mario), connexion à l’API Java (Spring Boot), intégration HTML/CSS des interfaces et test local via XAMPP.
+        <strong>Illustrations à intégrer :</strong><br><br>
+        <ul style="margin-left: 1.5rem; list-style-type: disc;">
+          <li>Page de connexion – <code>mario_connexion.png</code></li>
+          <li>Page d’accueil – <code>mario_accueil.png</code></li>
+          <li>Liste des films – <code>mario_liste_films.png</code></li>
+          <li>Ajout dans l’inventaire – <code>mario_inventaire.png</code></li>
+          <li>MCD (Peach) sur Looping – <code>mario_mcd.png</code></li>
+        </ul>
+        <!--
+          Exemple :
+          <img src="assets/images/ecole/mario_connexion.png" alt="Mario - Connexion" style="max-width: 600px;" />
+          <img src="assets/images/ecole/mario_accueil.png" alt="Mario - Accueil" style="max-width: 600px;" />
+          ...
+        -->
+        <p style="margin-top: 0.5rem;">
+          <em>Note :</em> Les captures ont été réalisées sur un PC portable. 
+          Tu peux ajuster leur dimension en utilisant <code>style="max-width: Xpx;"</code> 
+          ou un style CSS dédié pour éviter les images trop grandes.
+        </p>
       </li>
 
+      <!-- Lien GitHub -->
       <li>
         <strong>Lien GitHub :</strong><br>
         <a href="https://github.com/RFTG-2nd-annee/Toad" target="_blank">
           https://github.com/RFTG-2nd-annee/Toad
         </a>
       </li>
-
     </ul>
   </article>
+</section>
+
 </section>
