@@ -10,265 +10,178 @@ nav_order: 5
     Dans le cadre de mon BTS SIO option SLAM, elle me permet de suivre les avancées technologiques en développement web et
     en cybersécurité, afin d’améliorer mes compétences et d’optimiser les solutions que je développe.
 </p>
+
 <section style="margin-bottom: 2rem;">
   <h2 style="margin-bottom: 1rem;">Veille n°1 : Laravel</h2>
-  
   <p style="margin-bottom: 1rem;">
     <strong>Pourquoi cette technologie ?</strong><br>
-    Nous avons découvert Laravel. Il s'agit d'un framework PHP 
-    rapide à prendre en main et bien structuré (pratique) et sécurisé(CYBER). Ce qui est parfait pour 
-    débuter. Cette technologie nous à été donné dans le but de nous familiariser avec le code PHP. Elle
-    m'a permis de comprendre, de part sa structure, de comprendre la mécanique des routes, des modèles, 
-    des controllers, des vues, du CSS (tailwind,css3,...). De gérer facilement l’authentification avec 
-    un haschage des mots de passe présents dans la table de la base de données. Laravel facilite aussi 
-    la création des tables via son propre système de migration. Autrement dit, à partir de VScode et de
-    l'invite de commande, il est facile de créer les tables d'une base de données. Relation entre les 
-    tables structurée à partir d'un modèle conceptuel de données préalablement établit.
+    Laravel a été utilisé pour développer le front-end de l'application web Mario. Il s’agit d’un framework PHP moderne, structuré selon le modèle MVC, qui facilite l’organisation du code et la communication avec des APIs REST. Grâce à Blade, TailwindCSS et Guzzle, nous avons conçu une interface fluide, sécurisée et connectée au back-end Spring Boot.
   </p>
-  
   <p style="margin-bottom: 1rem;">
     <strong>Ressources consultées :</strong><br>
-    • Documentation officielle de Laravel (<a href="https://laravel.com/docs">laravel.com/docs</a>)<br>
-    • Tutoriels vidéo sur YouTube (chaînes francophones sur Laravel)<br>
-    • Articles OpenClassrooms et blogs tech sur l’architecture MVC<br>
-    • OpenAI (avec précaution : comprendre et savoir lire ce qu'on récupère en matière d'information).
+    • Documentation officielle Laravel (<a href="https://laravel.com/docs">laravel.com/docs</a>)<br>
+    • Tutoriels YouTube<br>
+    • Articles OpenClassrooms<br>
+    • OpenAI (avec vérification des sources)
   </p>
-  
   <p>
     <strong>Ce que j’ai appris :</strong><br>
-    • Comment mettre en place une base de données via les migrations Laravel<br>
-    • Gestion des routes et création de contrôleurs pour séparer logiques métier et affichage<br>
-    • Utilisation de l’ORM Eloquent pour manipuler plus facilement les données<br>
-    • Configuration de Composer et des dépendances pour un projet Laravel
+    • Utilisation de Blade pour les vues<br>
+    • Appels HTTP avec Guzzle<br>
+    • Intégration TailwindCSS<br>
+    • Gestion de l’authentification via la table staff<br>
+    • Utilisation des migrations Laravel (lorsque compatible avec la BDD)
   </p>
 </section>
 
 <section style="margin-bottom: 2rem;">
   <h2 style="margin-bottom: 1rem;">Veille n°2 : Spring Boot</h2>
-  
   <p style="margin-bottom: 1rem;">
-    <strong>Pourquoi cette technologie;?</strong><br>
-    Dans le cadre de RFTG, nous avions besoin d’un <em>backend</em> Java 
-    robuste et rapide à mettre en place. Spring Boot s’est avéré idéal, car il 
-    simplifie la configuration et la création d’une API REST.
+    <strong>Pourquoi cette technologie ?</strong><br>
+    Spring Boot a été choisi pour créer le back-end du projet RFTG (Mario + Luigi). Il permet de développer rapidement des APIs REST fiables, en Java, avec une structure claire. Nous avons codé manuellement dans VS Code, sans utiliser Spring Initializr, en structurant les contrôleurs pour gérer les entités comme film, inventory, rental.
   </p>
-  
   <p style="margin-bottom: 1rem;">
-    <strong>Ressources consultées&nbsp;:</strong><br>
-    • Documentation officielle Spring (<a href="https://spring.io/projects/spring-boot" target="_blank">spring.io</a>)<br>
-    • Tutoriels vidéo YouTube (déploiement, mise en place de REST Controllers)<br>
-    • OpenAI
-    • Forums comme Stack Overflow pour résoudre des erreurs spécifiques
+    <strong>Ressources consultées :</strong><br>
+    • Documentation Spring Boot (<a href="https://spring.io/projects/spring-boot" target="_blank">spring.io</a>)<br>
+    • Tutoriels vidéo YouTube<br>
+    • OpenAI pour des explications ciblées
   </p>
-  
   <p>
-    <strong>Ce que j’ai appris&nbsp;:</strong><br>
-    • Comment configurer rapidement un projet Java avec Spring Initializr<br>
-    • Création de contrôleurs REST et utilisation d’annotations comme <code>@RestController</code><br>
+    <strong>Ce que j’ai appris :</strong><br>
+    • Structuration manuelle d’un projet Java sous VS Code<br>
+    • Création d’API REST (GET, POST...) avec @RestController<br>
+    • Configuration Maven et mapping des entités<br>
+    • Traçage des erreurs via logs Java<br>
+    • Respect strict de la structure imposée (aucune modification du backend possible)
   </p>
 </section>
 
 <section style="margin-bottom: 2rem;">
   <h2 style="margin-bottom: 1rem;">Veille n°3 : Android Studio & Processus Asynchrone</h2>
-  
   <p style="margin-bottom: 1rem;">
-    <strong>Pourquoi cette techno ?</strong><br>
-    Durant la réalisation de l’application mobile RFTG, nous avons rencontré la problématique 
-    de gérer des tâches en arrière-plan (téléchargement de données, appels réseau) sans bloquer 
-    l’interface. Android Studio, combiné à des mécanismes d’exécution asynchrone, nous a permis 
-    de maintenir une application fluide et réactive.
+    <strong>Pourquoi cette technologie ?</strong><br>
+    L’application mobile Luigi devait être fluide et responsive. Pour cela, les appels aux webservices Spring Boot (comme /rental/add) devaient être réalisés en arrière-plan, sans bloquer l’interface. D’où l’importance des Threads Java pour l’exécution asynchrone.
   </p>
-  
   <p style="margin-bottom: 1rem;">
     <strong>Ressources consultées :</strong><br>
-    • Documentation officielle d’Android (section <em>Threads &amp; Async Tasks</em>)<br>
-    • Tutoriels YouTube sur l’utilisation des <code>AsyncTask</code> (versions plus anciennes) 
-      et des <em>coroutines</em> Kotlin<br>
-    • Blogs et articles sur <em>LiveData</em>, <em>ViewModel</em> et l’architecture MVVM 
-      (pour une approche plus moderne)<br>
-    • Forums Stack Overflow pour la gestion des <em>handlers</em> et des <em>runnables</em>
+    • Documentation officielle Android (AsyncTask, Threads)<br>
+    • Tutoriels YouTube sur les appels réseau<br>
+    • Blogs sur ViewModel, LiveData, gestion du panier<br>
+    • Stack Overflow pour des cas concrets de gestion du contexte UI
   </p>
-  
   <p>
     <strong>Ce que j’ai appris :</strong><br>
-    • L’importance d’effectuer les opérations longues (connexion réseau, accès à la BDD) dans 
-      un thread distinct du thread principal pour éviter de figer l’UI<br>
-    • Comment utiliser des composants d’architecture (ViewModel, LiveData) pour observer 
-      l’état de l’application sans bloquer l’interface<br>
-    • Les bonnes pratiques pour synchroniser l’UI après une tâche asynchrone et mettre à jour 
-      l’affichage en toute sécurité
+    • Exécuter des appels API dans des Threads<br>
+    • Utiliser ArrayList&lt;Integer&gt; pour stocker les filmId<br>
+    • Associer dynamiquement un filmId à son titre<br>
+    • Afficher et synchroniser l’interface après réponse API<br>
+    • Rendre l’URL d’appel configurable dynamiquement via Intent
   </p>
 </section>
 
 <section style="margin-bottom: 2rem;">
   <h2 style="margin-bottom: 1rem;">Veille n°4 : Bug Bounty & YesWeHack</h2>
-
   <p style="margin-bottom: 1rem;">
-    <strong>Pourquoi cette approche&nbsp;?</strong><br>
-    Au cours de mon projet 2ème année, j’ai découvert l’univers du 
-    bug bounty via la plateforme YesWeHack. Il s’agit d’un moyen pour 
-    les entreprises de faire tester leurs sites/applications par 
-    des chercheurs en sécurité, avec la perspective de récompenser 
-    les failles trouvées. Cela offrait un cadre légal et encadré pour 
-    apprendre la chasse aux vulnérabilités (XSS, IDOR, etc.) tout en 
-    collaborant avec d’autres experts.
+    <strong>Pourquoi cette approche ?</strong><br>
+    Le bug bounty est une méthode encadrée pour identifier et signaler des failles de sécurité sur des sites web. YesWeHack propose une plateforme légale pour apprendre, tester et collaborer avec des entreprises. J’ai pu expérimenter la recherche de failles comme XSS, IDOR, ou open redirect.
   </p>
-
   <p style="margin-bottom: 1rem;">
     <strong>Ressources consultées :</strong><br>
-    • Documentation officielle YesWeHack (<a href="https://yeswehack.com" target="_blank">yeswehack.com</a>)<br>
-    • Tutoriels et articles sur la création d’un programme de bug bounty<br>
-    • OWASP Top 10 pour identifier et comprendre les vulnérabilités les plus courantes<br>
-    • Présentations YouTube consacrées au bug bounty (HackerOne, YesWeHack, etc.)<br>
-    • Documentation de Burp Suite et ZAP pour l’exploitation pratique des failles
+    • YesWeHack (<a href="https://yeswehack.com" target="_blank">yeswehack.com</a>)<br>
+    • OWASP Top 10<br>
+    • Tutoriels YouTube HackerOne/YesWeHack<br>
+    • Outils Burp Suite, ZAP, scripts Python pour la phase de reconnaissance
   </p>
-
-  <p style="margin-bottom: 1rem;">
-    <strong>Ce que j’ai appris :</strong><br>
-    • La notion de <em>scope</em> dans un bug bounty&nbsp;: comment cibler 
-      les domaines autorisés et éviter de tester des ressources hors périmètre<br>
-    • Les cinq vulnérabilités clés (Force Brute, Injection SQL, XSS réfléchi, 
-      IDOR, Open Redirect) et leur mode d’exploitation réel<br>
-    • L’automatisation partielle du “recon” (recherche de pages et de sous‐domaines) 
-      grâce à des outils comme <strong>OWASP ZAP</strong> ou 
-      <strong>Python</strong> (scripts d’extraction)<br>
-    • L’importance d’une <em>démarche méthodique</em> pour limiter 
-      les oublis et bien documenter chaque tentative d’intrusion<br>
-    • Les bonnes pratiques pour signaler proprement une vulnérabilité 
-      (exploit, impact, preuve de concept) et échanger avec l’entreprise concernée
-  </p>
-
   <p>
-    <strong>Perspectives :</strong><br>
-    Cette expérience m’a permis de mieux cerner l’écosystème 
-    des tests d’intrusion, de la remontée des failles et du “bug bounty” 
-    en général. Je prévois de poursuivre cette voie en étudiant 
-    plus en détail les approches <em>DevSecOps</em> et la mise en place 
-    d’outils d’analyse continue.
+    <strong>Ce que j’ai appris :</strong><br>
+    • Définir un scope précis de test<br>
+    • Rechercher automatiquement des endpoints vulnérables<br>
+    • Exécuter des attaques contrôlées (ex : injection, IDOR)<br>
+    • Rédiger un rapport d’exploitation (preuve, impact, recommandation)<br>
+    • Collaborer dans un cadre légal et professionnel
   </p>
 </section>
 
 <section style="margin-bottom: 2rem;">
   <h2 style="margin-bottom: 1rem;">Veille n°5 : Kali Linux</h2>
-  
   <p style="margin-bottom: 1rem;">
-    <strong>Pourquoi cette distribution&nbsp;?</strong><br>
-    Kali Linux est une distribution Linux spécialisée dans les tests d’intrusion 
-    et l’audit de sécurité. Elle regroupe un large éventail d’outils préinstallés 
-    (scan réseau, sniffing, cracking de mots de passe, etc.).  
-    Dans le cadre de mes projets et de la cellule Cyber, Kali Linux s’est avérée 
-    très pratique pour centraliser tous les outils nécessaires à l’évaluation 
-    de la sécurité d’un système ou d’une application web.
+    <strong>Pourquoi cette distribution ?</strong><br>
+    Kali Linux est une distribution spécialisée pour l’audit de sécurité. Elle contient les outils nécessaires pour scanner, analyser et tester des systèmes ou applications web. Je l’ai utilisée en environnement virtuel pour tester en toute sécurité.
   </p>
-  
   <p style="margin-bottom: 1rem;">
-    <strong>Ressources consultées&nbsp;:</strong><br>
-    • Site officiel de Kali Linux (<a href="https://www.kali.org" target="_blank">kali.org</a>)<br>
-    • Documentation sur l’installation et la configuration (images ISO, VirtualBox, etc.)<br>
-    • Tutoriels YouTube sur l’utilisation de certains outils intégrés (Nmap, Aircrack-ng, Metasploit)<br>
-    • Communauté Kali sur Reddit et forums officiels pour résoudre des problèmes spécifiques
+    <strong>Ressources consultées :</strong><br>
+    • Site officiel (<a href="https://www.kali.org" target="_blank">kali.org</a>)<br>
+    • Tutoriels YouTube (installation, Nmap, Metasploit)<br>
+    • Forums Kali Linux et Reddit
   </p>
-  
-  <p style="margin-bottom: 1rem;">
-    <strong>Ce que j’ai appris&nbsp;:</strong><br>
-    • Comment configurer et personnaliser un environnement Kali Linux (VM vs dual-boot)<br>
-    • Les différents packages préinstallés et leur usage (reconnaissance, exploitation, post-exploitation)<br>
-    • L’importance de maintenir un environnement à jour pour bénéficier des derniers correctifs 
-      et outils de sécurité<br>
-    • Les bonnes pratiques pour ne pas exposer inutilement sa machine lors de tests (réseau isolé, VPN, etc.)
-  </p>
-  
   <p>
-    <strong>Perspectives&nbsp;:</strong><br>
-    Kali Linux reste un pilier pour tout testeur d’intrusion ou chercheur en vulnérabilités. 
-    Je compte approfondir l’utilisation de certains outils avancés (ex. Metasploit) 
-    afin de mieux comprendre les scénarios d’attaque possibles et renforcer mes compétences 
-    en cyberdéfense.
+    <strong>Ce que j’ai appris :</strong><br>
+    • Installer Kali en VM et le sécuriser<br>
+    • Utiliser des outils comme Nmap, Nikto, Metasploit<br>
+    • Réaliser des scans de ports ou de vulnérabilités<br>
+    • Créer un environnement d’audit sans risques
   </p>
 </section>
 
 <section style="margin-bottom: 2rem;">
   <h2 style="margin-bottom: 1rem;">Veille n°6 : Burp Suite</h2>
-  
   <p style="margin-bottom: 1rem;">
-    <strong>Pourquoi cet outil&nbsp;?</strong><br>
-    Burp Suite est un outil incontournable pour l’audit de sécurité web. 
-    Il permet d’intercepter et de modifier les requêtes HTTP/HTTPS, 
-    de réaliser un scan automatisé des vulnérabilités, et d’effectuer 
-    des attaques plus ciblées (injection, brute force).  
-    Dans mon projet de 2ème année, j’ai notamment utilisé Burp Suite 
-    pour tester la robustesse des formulaires et identifier d’éventuelles failles 
-    de type <em>SQL Injection</em>, <em>XSS</em> ou <em>IDOR</em>.
+    <strong>Pourquoi cet outil ?</strong><br>
+    Burp Suite est un outil incontournable pour intercepter et analyser les requêtes web. Il permet d’identifier rapidement des failles comme XSS ou injections SQL. Je l’ai utilisé dans mes tests sur des formulaires web, et pour observer les comportements de l’API.
   </p>
-  
   <p style="margin-bottom: 1rem;">
-    <strong>Ressources consultées&nbsp;:</strong><br>
-    • Documentation officielle de PortSwigger (<a href="https://portswigger.net/burp" target="_blank">portswigger.net/burp</a>)<br>
-    • Tutoriels YouTube sur la configuration du proxy Burp (avec ou sans certificat) et la lecture 
-      des requêtes dans l’onglet “Proxy”<br>
-    • Blogs de chercheurs en sécurité démontrant des <em>use cases</em> concrets (ex. exploitation XSS)<br>
-    • OWASP Testing Guide pour recouper certaines étapes (ex. fuzzing, injection)
+    <strong>Ressources consultées :</strong><br>
+    • PortSwigger (<a href="https://portswigger.net/burp" target="_blank">portswigger.net</a>)<br>
+    • YouTube (config proxy, replay requêtes)<br>
+    • OWASP Testing Guide
   </p>
-  
-  <p style="margin-bottom: 1rem;">
-    <strong>Ce que j’ai appris&nbsp;:</strong><br>
-    • Le fonctionnement détaillé du proxy d’interception pour modifier “à la volée” 
-      les requêtes et réponses<br>
-    • Comment utiliser le module “Repeater” pour rejouer une requête en bouclant sur différentes 
-      valeurs (test d’injection, bypass de validations)<br>
-    • L’importance de la planification d’un test d’intrusion (cibler les pages critiques, 
-      authentification, zones d’upload, etc.)<br>
-    • Les limites de Burp Suite Free comparées à la version Pro (scan automatique avancé, etc.)
-  </p>
-  
   <p>
-    <strong>Perspectives&nbsp;:</strong><br>
-    Burp Suite est un outil qu’on retrouve dans de nombreux scénarios de tests d’intrusion.  
-    À l’avenir, je souhaite approfondir l’automatisation de tâches via des extensions 
-    (BApp Store), et mieux maîtriser les scans en profondeur pour accélérer la phase 
-    de “reconnaissance” sur les cibles web.
+    <strong>Ce que j’ai appris :</strong><br>
+    • Intercepter et modifier les requêtes en direct<br>
+    • Utiliser Repeater pour tester des valeurs dangereuses<br>
+    • Comprendre la structure HTTP des formulaires<br>
+    • Comparer les limites de la version Free vs Pro
   </p>
 </section>
 
 <section style="margin-bottom: 2rem;">
   <h2 style="margin-bottom: 1rem;">Veille n°7 : OWASP ZAP (Zed Attack Proxy)</h2>
+  <p style="margin-bottom: 1rem;">
+    <strong>Pourquoi cet outil ?</strong><br>
+    ZAP est un proxy open-source similaire à Burp, mais gratuit. Je l’ai utilisé pour automatiser la recherche d’URLs et tester leur sécurité. Il s’intègre bien dans une démarche DevSecOps et peut être scripté pour des tests en continu.
+  </p>
+  <p style="margin-bottom: 1rem;">
+    <strong>Ressources consultées :</strong><br>
+    • OWASP ZAP (<a href="https://www.zaproxy.org" target="_blank">zaproxy.org</a>)<br>
+    • Tutoriels sur les spiders et alertes<br>
+    • Forums GitHub OWASP ZAP
+  </p>
+  <section style="margin-bottom: 2rem;">
+  <h2 style="margin-bottom: 1rem;">Veille n°7 : OWASP ZAP (Zed Attack Proxy)</h2>
   
   <p style="margin-bottom: 1rem;">
     <strong>Pourquoi cet outil&nbsp;?</strong><br>
-    OWASP ZAP est un proxy similaire à Burp Suite, mais entièrement open source et soutenu 
-    par la communauté OWASP. Il offre des fonctionnalités de scan automatique 
-    et d’analyse des applications web (recherche de liens, injection, XSS, etc.).  
-    Dans mon projet, ZAP a été utilisé pour extraire toutes les URLs d’un site (scope du bounty) 
-    afin de les analyser et d’y appliquer différents tests en automatisant une partie du “recon”.
+    OWASP ZAP est un outil d’analyse de sécurité web, utilisé comme alternative open source à Burp Suite. Il est intégré directement dans la distribution Kali Linux, ce qui permet de l’utiliser rapidement dans un environnement dédié aux tests d’intrusion. J’ai utilisé ZAP pour scanner des sites web et identifier des failles potentielles dans un cadre pédagogique.
   </p>
   
   <p style="margin-bottom: 1rem;">
     <strong>Ressources consultées&nbsp;:</strong><br>
-    • Documentation officielle sur <a href="https://www.zaproxy.org" target="_blank">zaproxy.org</a><br>
-    • Guides OWASP (ex. <em>OWASP Testing Guide</em>) pour la méthodologie d’audit<br>
-    • Tutoriels vidéo portant sur l’installation, la configuration du proxy, et la fonction 
-      d’exploration automatique (spider)<br>
-    • Discussions sur les forums GitHub d’OWASP ZAP concernant l’extension de scripts 
-      (scripts Python/Groovy pour personnaliser le scan)
+    • Documentation officielle OWASP ZAP (<a href="https://www.zaproxy.org" target="_blank">zaproxy.org</a>)<br>
+    • Tutoriels YouTube (configuration, scans, interprétation des alertes)<br>
+    • Kali Linux + forums OWASP<br>
+    • OWASP Testing Guide (méthodologie d’audit)
   </p>
   
   <p style="margin-bottom: 1rem;">
     <strong>Ce que j’ai appris&nbsp;:</strong><br>
-    • Comment lancer un “spider” pour recenser toutes les pages d’une application web 
-      et détecter d’éventuels formulaires vulnérables<br>
-    • Paramétrer des alertes automatiques (XSS, SQLi, etc.) et comprendre 
-      comment ZAP interprète les résultats<br>
-    • La différence entre un scan passif (analyse du trafic déjà capturé) 
-      et un scan actif (tests d’injection ou d’énumération)<br>
-    • L’intérêt de combiner ZAP avec d’autres scripts Python pour filtrer 
-      ou trier les URLs récupérées
-  </p>
-  
+    • Lancer un spider (robot d’exploration) pour détecter toutes les pages d’un site web<br>
+    • Exécuter un scan passif pour détecter les vulnérabilités sans interagir<br>
+    • Déclencher un scan actif (attaque contrôlée) pour tester des failles comme XSS, SQLi, ou inclusion de fichiers<br>
+    • Lire les résultats dans l’onglet “Alerts” : chaque alerte est classée par niveau (Low, Medium, High) avec une description du problème, des preuves (ex : requêtes/réponses) et des recommandations
+  </p>  
   <p>
     <strong>Perspectives&nbsp;:</strong><br>
-    ZAP s’intègre très bien dans un workflow DevSecOps, en l’automatisant 
-    (CI/CD). Je compte explorer ces fonctionnalités avancées pour détecter 
-    en continu les régressions de sécurité et générer des rapports de vulnérabilités 
-    directement lors du déploiement d’une application web.
+    ZAP m’a permis de comprendre concrètement comment un site peut être analysé automatiquement. Je prévois de l’intégrer dans un workflow plus automatisé, par exemple en l’associant à des scripts Python ou à un pipeline CI/CD, pour détecter des failles dès le développement d’un site.
   </p>
+</section>
 </section>
